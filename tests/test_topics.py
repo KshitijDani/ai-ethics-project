@@ -26,12 +26,13 @@ class TopicSimulationTests(unittest.TestCase):
         self.data = self.root / 'data'
         self.data.mkdir()
         # Create in reverse order; loading must sort filenames.
-        (self.data / 'question_food.txt').write_text('Food one\nFood two\n')
-        (self.data / 'question_book.txt').write_text('\ufeff  Book one  \n\nBook one\n')
+        (self.data / 'questions_food.txt').write_text('Food one\nFood two\n')
+        (self.data / 'questions_book.txt').write_text('\ufeff  Book one  \n\nBook one\n')
         (self.data / 'questions.txt').write_text('Legacy input must be ignored')
+        (self.data / 'question_old.txt').write_text('Old singular prefix must be ignored')
         (self.data / 'nested').mkdir()
-        (self.data / 'nested/question_ignored.txt').write_text('Ignored')
-        (self.data / 'question_directory.txt').mkdir()
+        (self.data / 'nested/questions_ignored.txt').write_text('Ignored')
+        (self.data / 'questions_directory.txt').mkdir()
         self.personas = self.root / 'Personas'
         self.personas.mkdir()
         for name in simulate.PERSONAS:
@@ -81,7 +82,7 @@ class TopicSimulationTests(unittest.TestCase):
                                         expected.append((model, mode, topic, persona, repetition, turn))
                 actual = []
                 for row, payload in zip(frame.itertuples(), self.payloads):
-                    topic = row.question_file_name.removeprefix('question_').removesuffix('.txt')
+                    topic = row.question_file_name.removeprefix('questions_').removesuffix('.txt')
                     actual.append((row.model, row.mode, topic, row.persona, row.run_number, row.turn))
                     self.assertEqual(row.question_number, f'{topic}_{row.turn}')
                     self.assertEqual(row.run_id,
@@ -105,12 +106,12 @@ class TopicSimulationTests(unittest.TestCase):
         for module, experiment in ((simulate, 'multi-turn'), (simulate_single_turn, 'single-turn')):
             with self.subTest(experiment=experiment):
                 log = self.invoke(module, '--mode', 'baseline', '--model', 'gemma', '--runs', '1')
-                self.assertIn('Extracted 2 questions from question_book.txt | topic=book | IDs=book_1..book_2', log)
-                self.assertIn('Extracted 2 questions from question_food.txt', log)
+                self.assertIn('Extracted 2 questions from questions_book.txt | topic=book | IDs=book_1..book_2', log)
+                self.assertIn('Extracted 2 questions from questions_food.txt', log)
                 self.assertIn('Loaded 4 questions from 2 files.', log)
                 self.assertIn(f'Starting model=gemma | experiment={experiment}', log)
                 self.assertIn('Starting mode=baseline | model=gemma', log)
-                self.assertIn('Starting topic=book | file=question_book.txt | questions=2', log)
+                self.assertIn('Starting topic=book | file=questions_book.txt | questions=2', log)
                 self.assertEqual(log.count('Starting run |'), 2)
                 self.assertEqual(log.count('Completed run |'), 2)
                 self.assertNotIn('Book one', log)
@@ -118,7 +119,7 @@ class TopicSimulationTests(unittest.TestCase):
                 verbose_output = self.root / f'verbose-{experiment}'
                 log = self.invoke(module, '--mode', 'prompt-prepend-once', '--model', 'gemma',
                                   '--runs', '1', '--verbose', '--output-folder', str(verbose_output))
-                self.assertIn('Question | file=question_book.txt | ID=book_1 | text=Book one', log)
+                self.assertIn('Question | file=questions_book.txt | ID=book_1 | text=Book one', log)
                 self.assertEqual(log.count('Question |'), 4)
                 self.assertEqual(log.count('Starting request |'), 12)
                 self.assertEqual(log.count('Completed request |'), 12)
@@ -129,8 +130,8 @@ class TopicSimulationTests(unittest.TestCase):
 
     def test_invalid_inputs_fail_before_server_start(self):
         for module in (simulate, simulate_single_turn):
-            for filename, content, error in [('question_.txt', 'One', 'topic'),
-                                             ('question_empty.txt', '\n ', 'No questions')]:
+            for filename, content, error in [('questions_.txt', 'One', 'topic'),
+                                             ('questions_empty.txt', '\n ', 'No questions')]:
                 path = self.data / filename
                 path.write_text(content)
                 with self.subTest(module=module.__name__, filename=filename), \
@@ -150,7 +151,7 @@ class TopicSimulationTests(unittest.TestCase):
             if folder.name == 'empty':
                 folder.mkdir()
             with self.subTest(folder=folder), contextlib.redirect_stdout(io.StringIO()):
-                with self.assertRaisesRegex(ValueError, 'question_.*topic'):
+                with self.assertRaisesRegex(ValueError, 'questions_.*topic'):
                     simulate.discover_questions(folder)
 
     def test_failure_has_context_and_no_false_completion(self):
@@ -183,11 +184,11 @@ class TopicSimulationTests(unittest.TestCase):
                 self.assertEqual(list(frame.columns), COLUMNS)
 
     def test_full_planned_matrix_counts(self):
-        for path in self.data.glob('question_*.txt'):
+        for path in self.data.glob('questions_*.txt'):
             if path.is_file():
                 path.unlink()
         for topic in ('book', 'food', 'movie', 'hobbies'):
-            (self.data / f'question_{topic}.txt').write_text('\n'.join(f'{topic} {i}' for i in range(10)))
+            (self.data / f'questions_{topic}.txt').write_text('\n'.join(f'{topic} {i}' for i in range(10)))
         for module, experiment in ((simulate, 'multi-turn'), (simulate_single_turn, 'single-turn')):
             self.payloads.clear()
             self.invoke(module, '--runs', '5')

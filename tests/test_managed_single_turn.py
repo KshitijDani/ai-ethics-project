@@ -60,7 +60,7 @@ finally:
             for name in ('gemma', 'qwen', 'ministral')}, 'runs': 1}))
         self.questions_folder = self.root / 'data'
         self.questions_folder.mkdir()
-        self.questions = self.questions_folder / 'question_book.txt'
+        self.questions = self.questions_folder / 'questions_book.txt'
         self.questions.write_text('One\nTwo\n')
         self.output = self.root / 'output'
         self.csv_output = self.output / self.experiment

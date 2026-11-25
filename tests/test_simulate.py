@@ -50,7 +50,7 @@ class SimulationTests(unittest.TestCase):
         self.config.write_text(json.dumps({'models': {m: {'base_url': url, 'api_model': m} for m in ('gemma', 'qwen', 'ministral')}, 'runs': 2}))
         self.questions_folder = self.root / 'data'
         self.questions_folder.mkdir()
-        self.questions = self.questions_folder / 'question_book.txt'
+        self.questions = self.questions_folder / 'questions_book.txt'
         self.questions.write_text('Question one\n\nQuestion two\n')
         self.personas = self.root / 'Personas'
         self.personas.mkdir()

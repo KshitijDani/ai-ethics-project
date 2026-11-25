@@ -91,15 +91,15 @@ Supply newline-separated questions in topic files under `data/`, for example:
 
 ```text
 data/
-  question_book.txt
-  question_food.txt
-  question_hobbies.txt
-  question_movie.txt
+  questions_books.txt
+  questions_food.txt
+  questions_hobby.txt
+  questions_movies.txt
 ```
 
-Both simulators load every direct-child file matching `question_<topic>.txt`, sorted by filename. Each non-empty line is one predefined question. Surrounding whitespace and an optional UTF-8 BOM are removed; question order and repeated questions are preserved. Unrelated files (including the legacy `data/questions.txt`) and nested directories are ignored. No matching files, an empty topic name, or a matching file with no questions is an error before any server starts.
+Both simulators load every direct-child file matching `questions_<topic>.txt`, sorted by filename. Each non-empty line is one predefined question. Surrounding whitespace and an optional UTF-8 BOM are removed; question order and repeated questions are preserved. Unrelated files (including the legacy `data/questions.txt`) and nested directories are ignored. No matching files, an empty topic name, or a matching file with no questions is an error before any server starts.
 
-The study calls for ten independent questions per topic, using the same files for both experiments. The scripts support any number of topics and questions for smaller trials. They generate no questions. The topic files will be supplied separately; the legacy mixed-topic file is left untouched. Use `--questions-folder PATH` for another input directory; this replaces the old `--questions FILE` option.
+The included four topic files each contain ten questions, using the same files for both experiments. The scripts support any number of topics and questions for smaller trials. They generate no questions. The legacy mixed-topic file is ignored. Use `--questions-folder PATH` for another input directory; this replaces the old `--questions FILE` option.
 
 Personalized modes read these non-empty files:
 
@@ -220,9 +220,9 @@ Only the selected experiment, models, and modes are created. Old output folders 
 model,mode,persona,question_file_name,question_number,run_id,run_number,turn,question,user_message,response,timestamp
 ```
 
-`question_file_name` is the source basename. `question_number` combines the filename's topic suffix with its one-based non-empty-line position: `question_book.txt` produces `book_1`, `book_2`, etc. `turn` is the numeric position within that topic, starting at 1. `question` stores the original stripped question; `user_message` includes any persona prefix; `response` is the assistant answer; `timestamp` is UTC.
+`question_file_name` is the source basename. `question_number` combines the filename's topic suffix with its one-based non-empty-line position: `questions_books.txt` produces `books_1`, `books_2`, etc. `turn` is the numeric position within that topic, starting at 1. `question` stores the original stripped question; `user_message` includes any persona prefix; `response` is the assistant answer; `timestamp` is UTC.
 
-`run_id` is `<experiment>/<model>/<mode>/<topic>/<persona>/<run_number>`, for example `multi-turn/gemma/prompt-prepend/book/American/1`. Baseline uses `baseline` as its persona. In single-turn output, this ID groups a repetition batch of independent requests; it does not imply shared history. `run_number` distinguishes repetitions. IDs are scoped to an output experiment; question text should be checked when combining results from different input versions.
+`run_id` is `<experiment>/<model>/<mode>/<topic>/<persona>/<run_number>`, for example `multi-turn/gemma/prompt-prepend/books/American/1`. Baseline uses `baseline` as its persona. In single-turn output, this ID groups a repetition batch of independent requests; it does not imply shared history. `run_number` distinguishes repetitions. IDs are scoped to an output experiment; question text should be checked when combining results from different input versions.
 
 The CSV omits finish reason, reasoning content, API model, server URL, persona prompt, system prompt, seed, temperature, `top_p`, and `max_tokens`. Generation settings still come from the configuration and existing CLI overrides.
 
@@ -237,14 +237,14 @@ Weights, default output folders, CSV files, local configuration and virtual envi
 Both scripts always print file extraction counts, question ID ranges, the total input count, output location, experiment summary, model/mode/topic starts, and each repetition's start and completion. Messages are flushed immediately:
 
 ```text
-Extracted 10 questions from question_book.txt | topic=book | IDs=book_1..book_10
-Extracted 10 questions from question_food.txt | topic=food | IDs=food_1..food_10
+Extracted 10 questions from questions_books.txt | topic=books | IDs=books_1..books_10
+Extracted 10 questions from questions_food.txt | topic=food | IDs=food_1..food_10
 Loaded 40 questions from 4 files.
 Starting model=gemma | experiment=multi-turn
 Starting mode=prompt-prepend | model=gemma
-Starting topic=book | file=question_book.txt | questions=10
-Starting run | model=gemma | mode=prompt-prepend | topic=book | persona=American | run=1/5
-Completed run | model=gemma | mode=prompt-prepend | topic=book | persona=American | run=1/5 | responses=10
+Starting topic=books | file=questions_books.txt | questions=10
+Starting run | model=gemma | mode=prompt-prepend | topic=books | persona=American | run=1/5
+Completed run | model=gemma | mode=prompt-prepend | topic=books | persona=American | run=1/5 | responses=10
 ```
 
 Add `--verbose` to list every extracted question's filename, ID, and full text once during loading, plus each request's start and completion with its condition, repetition, and question ID:

@@ -37,12 +37,12 @@ def read_questions(path):
 
 def discover_questions(folder, verbose=False):
     """Load direct-child topic files once, before starting any model servers."""
-    paths = sorted(path for path in folder.glob("question_*.txt") if path.is_file())
+    paths = sorted(path for path in folder.glob("questions_*.txt") if path.is_file())
     if not paths:
-        raise ValueError(f"No question_<topic>.txt files found in {folder}.")
+        raise ValueError(f"No questions_<topic>.txt files found in {folder}.")
     topics = []
     for path in paths:
-        topic = path.stem.removeprefix("question_")
+        topic = path.stem.removeprefix("questions_")
         if not topic.strip():
             raise ValueError(f"Question file needs a non-empty topic: {path}")
         questions = read_questions(path)
@@ -81,7 +81,7 @@ def arguments(argv=None, description=__doc__):
     parser.add_argument("--mode", choices=MODES, help="omit to run all three modes")
     parser.add_argument("--config", type=Path, default=ROOT / "config.local.json")
     parser.add_argument("--questions-folder", type=Path, default=ROOT / "data",
-                        help="directory containing question_<topic>.txt files (default: data/)")
+                        help="directory containing questions_<topic>.txt files (default: data/)")
     parser.add_argument("--personas-folder", type=Path, default=ROOT / "Personas")
     parser.add_argument("--output-folder", type=Path)
     parser.add_argument("--model", required=True, help="model key to run, or all for every configured model")
