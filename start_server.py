@@ -1,12 +1,17 @@
 """Start one llama.cpp server using the simulator's local configuration."""
 import argparse
+from contextlib import contextmanager
 import json
 import shlex
 import shutil
+import socket
 import subprocess
 import sys
+import time
 from pathlib import Path
 from urllib.parse import urlparse
+from urllib.error import URLError
+from urllib.request import urlopen
 
 ROOT = Path(__file__).resolve().parent
 
@@ -66,6 +71,51 @@ def server_command(config_path, model_name):
             raise ValueError("chat_template_kwargs must be a JSON object.")
         command += ["--chat-template-kwargs", json.dumps(template_kwargs)]
     return command
+
+
+@contextmanager
+def managed_server(command, base_url, log_path, startup_timeout):
+    """Own one server process, waiting for readiness and always reaping it."""
+    port = int(command[command.index("--port") + 1])
+    # Refuse occupied ports rather than using or stopping an unrelated server.
+    with socket.socket() as probe:
+        probe.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        try:
+            probe.bind(("127.0.0.1", port))
+        except OSError as exc:
+            raise RuntimeError(f"Port {port} is already in use; stop its server before using --manage-servers.") from exc
+    health_url = base_url.split("/v1")[0].rstrip("/") + "/health"
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    with log_path.open("w", encoding="utf-8") as log:
+        print(f"Starting server; log: {log_path}", flush=True)
+        process = subprocess.Popen(command, stdout=log, stderr=subprocess.STDOUT)
+        try:
+            deadline = time.monotonic() + startup_timeout
+            while True:
+                if process.poll() is not None:
+                    raise RuntimeError(f"Server exited with code {process.returncode}; see {log_path}")
+                remaining = deadline - time.monotonic()
+                if remaining <= 0:
+                    raise RuntimeError(f"Server startup timed out; see {log_path}")
+                try:
+                    with urlopen(health_url, timeout=min(1, remaining)) as response:
+                        if response.status == 200:
+                            break
+                except (URLError, TimeoutError, OSError):
+                    pass
+                time.sleep(min(0.2, max(0, deadline - time.monotonic())))
+            if process.poll() is not None:
+                raise RuntimeError(f"Server exited during startup; see {log_path}")
+            yield
+        finally:
+            if process.poll() is None:
+                print("Stopping server...", flush=True)
+                process.terminate()
+            try:
+                process.wait(timeout=10)
+            except subprocess.TimeoutExpired:
+                process.kill()
+                process.wait()
 
 
 def main(argv=None):

@@ -13,7 +13,7 @@ python -m pip install -r requirements.txt
 test -f config.local.json || cp config.example.json config.local.json
 ```
 
-Edit `config.local.json` for your machine. This file is ignored by Git; each collaborator keeps their own settings. Download the weights separately. `start_server.py` starts a configured local model; `simulate.py` connects to its running server.
+Edit `config.local.json` for your machine. This file is ignored by Git; each collaborator keeps their own settings. Download the weights separately. `start_server.py` starts a configured local model. Both simulation scripts can connect to existing servers or start and stop them automatically with `--manage-servers`.
 
 ## Configure model paths and servers
 
@@ -65,7 +65,7 @@ Edit the top-level `system_prompt` field in `config.local.json`:
 
 The script adds this as the first system message in every conversation, including baseline, and retains it in the history sent with each question. Persona text is still added to user messages according to `--mode`. Baseline therefore uses the system instruction but no persona. The system message does not count as a question-answer turn.
 
-The same prompt is the default when the field is omitted. Set it to `""` to disable the system message. Each output row records `system_prompt` so results retain the exact instruction used. This is a model instruction; the script does not enforce recommendation counts in generated text.
+The same prompt is the default when the field is omitted. Set it to `""` to disable the system message. The analysis CSV omits the system prompt and generation settings; keep your configuration with your study records. This is a model instruction; the script does not enforce recommendation counts in generated text.
 
 ## Start the model server
 
@@ -79,24 +79,53 @@ python start_server.py gemma --dry-run
 python start_server.py gemma
 ```
 
-Use `qwen` or `ministral` in place of `gemma` to start another model. Run simulation commands in a second terminal with the same virtual environment active. Each simulator invocation targets one model. Stop the server with Ctrl+C before loading the next model when running one at a time.
+Use `qwen` or `ministral` in place of `gemma` to start another model. Run simulation commands in a second terminal with the same virtual environment active. When managing servers manually, stop the server with Ctrl+C before loading the next model. Use `--model all --manage-servers` on either simulator to handle the full sequence automatically in one terminal.
 
-The launcher uses the configured port, alias, model file, and `context_size` (default 4096). The example configuration disables Qwen thinking via `chat_template_kwargs`; keep generation and server settings consistent throughout an experiment. Server startup is a separate step from simulation; automatic model switching is not implemented.
+The launcher uses the configured port, alias, model file, and `context_size` (default 4096). The example configuration disables Qwen thinking via `chat_template_kwargs`; keep generation and server settings consistent throughout an experiment. With `--manage-servers`, each simulator uses the same launcher configuration to load, wait for, and stop one model at a time.
 
 See the [llama.cpp installation instructions](https://github.com/ggml-org/llama.cpp) and [server documentation](https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md) for installation and hardware options.
 
 ## Supply your inputs
 
-The supplied files are empty templates. Fill them before running:
+Supply newline-separated questions in topic files under `data/`, for example:
 
-- `data/questions.txt`: one question per line. Every non-empty line is loaded in order, including repeated questions. There is no ten-question limit.
+```text
+data/
+  question_book.txt
+  question_food.txt
+  question_hobbies.txt
+  question_movie.txt
+```
+
+Both simulators load every direct-child file matching `question_<topic>.txt`, sorted by filename. Each non-empty line is one predefined question. Surrounding whitespace and an optional UTF-8 BOM are removed; question order and repeated questions are preserved. Unrelated files (including the legacy `data/questions.txt`) and nested directories are ignored. No matching files, an empty topic name, or a matching file with no questions is an error before any server starts.
+
+The study calls for ten independent questions per topic, using the same files for both experiments. The scripts support any number of topics and questions for smaller trials. They generate no questions. The topic files will be supplied separately; the legacy mixed-topic file is left untouched. Use `--questions-folder PATH` for another input directory; this replaces the old `--questions FILE` option.
+
+Personalized modes read these non-empty files:
+
 - `Personas/American.txt`
 - `Personas/French.txt`
 - `Personas/Chinese.txt`
 
-Each persona file contains the complete prompt you want prepended. Baseline does not read persona files. Personalized modes require all three persona files to be non-empty. The script generates no questions or personas.
+Each contains the complete persona prompt. Baseline does not need persona files.
 
 ## Run
+
+Run the entire multi-turn experiment across all configured models and all three modes with one command:
+
+```bash
+python simulate.py --model all --manage-servers
+```
+
+The runner starts and stops each server automatically and saves all results in one timestamped output folder. Five runs per condition are used by default. Execution order is model → mode → topic → persona → repetition → question. For each model, baseline finishes across all topics before prompt-prepend, then prompt-prepend-once. Within a mode, all personas and repetitions for a topic finish before the next topic. Conversation history is retained within a topic/persona/repetition and reset between topics, runs, personas, modes, and models. Fill all three persona files before running all modes. For baseline only:
+
+```bash
+python simulate.py --mode baseline --model all --manage-servers
+```
+
+Both simulators accept `--runs`, `--output-folder`, and `--startup-timeout` with managed servers. Each server gets a log under `multi-turn/server-logs/` or `single-turn/server-logs/` in the output folder. Stop any manually running servers on the configured ports before using managed startup. Errors or Ctrl+C stop the owned server and preserve completed responses.
+
+For manually managed servers, the existing per-model commands remain available:
 
 ```bash
 # All three modes for Gemma, five runs by default:
@@ -113,25 +142,35 @@ python simulate.py --mode prompt-prepend-once --model gemma --output-folder "Out
 # Override the configured server URL for this invocation:
 python simulate.py --model qwen --server-url http://127.0.0.1:8080/v1
 
-# Small trial with your own shorter questions file:
-python simulate.py --mode baseline --model qwen --runs 1 --questions data/trial.txt --output-folder "Output Trial"
+# Small trial with a directory of shorter topic files:
+python simulate.py --mode baseline --model qwen --runs 1 --questions-folder trial-data --output-folder "Output Trial"
 
 python simulate.py --help
 ```
 
 ### Independent single-turn questions
 
-Use `simulate_single_turn.py` when each question should be independent rather than part of a conversation. Every request contains only the optional system prompt and that question; no earlier user or assistant messages are sent. The script supports `baseline` and `prompt-prepend`. It omits `prompt-prepend-once`, since with independent questions it would behave exactly like `prompt-prepend`.
+Use `simulate_single_turn.py` when each question should be independent rather than part of a conversation. Every request contains only the optional system prompt and that question; no earlier user or assistant messages are sent. It reads the same topic files and supports all three mode labels. In both personalized modes, persona text is prepended to every independent request. `prompt-prepend-once` is therefore an equivalent condition to `prompt-prepend` in the single-turn experiment; it does not personalize only the first question.
 
 ```bash
-# Both modes, five runs by default:
+# All three mode labels, five runs by default:
 python simulate_single_turn.py --model gemma
 
-# Baseline only, one run, using a custom question file:
-python simulate_single_turn.py --mode baseline --model gemma --runs 1 --questions data/trial.txt
+# Baseline only, one run, using a custom topic directory:
+python simulate_single_turn.py --mode baseline --model gemma --runs 1 --questions-folder trial-data
 ```
 
-Options for configuration, server URL, persona folder, run count and output folder work the same as for `simulate.py`. Each CSV row represents one independent question request. With N questions, five runs produce 5 × N baseline rows and 15 × N persona-prepended rows (five runs for each of the three persona files). The persona is prepended to every question in that mode.
+To start and stop the local servers automatically and run baseline questions across all configured models with one command:
+
+```bash
+python simulate_single_turn.py --mode baseline --model all --manage-servers
+```
+
+This loads one model at a time in configuration order, waits for its `/health` endpoint, runs its questions, and stops its server before loading the next. It uses five runs by default and creates one shared timestamped output folder containing `single-turn/baseline/<model>.csv` and `single-turn/server-logs/<model>.log`. Add `--runs 1` for a short trial or `--output-folder "Output Baseline Single Turn"` to name the folder. Omit `--mode` to run all three single-turn mode labels, or replace `all` with one model key.
+
+Managed startup requires valid `server_executable`, GGUF paths, and local server URLs in your configuration. Stop any manually running server on the configured ports first. The runner never stops unrelated servers. Startup has a 600-second limit per model, adjustable with `--startup-timeout SECONDS`. Errors or Ctrl+C stop the owned server and preserve completed responses; rerun into a fresh output folder. `--server-url` is only supported for a single externally managed model. Without `--manage-servers`, servers must already be running.
+
+Options for configuration, question folder, server URL, persona folder, run count and output folder work the same as for `simulate.py`. Each CSV row represents one independent question request. With N questions, five runs produce 5 × N baseline rows and 15 × N rows per personalized mode (five runs for each of the three persona files), totaling 35 × N rows per model when all three modes run. The persona is prepended to every question in either personalized mode.
 
 Optional arguments also include `--config PATH` and `--personas-folder PATH`. Default inputs/configuration are relative to the repository; explicitly supplied relative paths are relative to your shell's current directory. Changing URLs or model IDs requires configuration edits only, never Python edits.
 
@@ -141,13 +180,13 @@ Optional arguments also include `--config PATH` and `--personas-folder PATH`. De
 | `prompt-prepend` | Persona text followed by the question, every turn |
 | `prompt-prepend-once` | Persona text only in the first user message |
 
-Every conversation starts fresh. Prior user and assistant messages remain in history until that conversation ends. The once-only persona therefore remains in history but is not repeated in later user messages. Every run asks the complete question list. Long conversations must fit the model server's configured context; the script does not silently drop questions or history. Configure the server accordingly.
+The table above describes multi-turn behavior. Every multi-turn conversation starts fresh. Prior user and assistant messages remain in history until that conversation ends. The once-only persona therefore remains in history but is not repeated in later user messages. Every repetition asks the complete question list for its topic. Long conversations must fit the model server's configured context; the script does not silently drop questions or history. Configure the server accordingly.
 
 Runs use consecutive seeds starting at the configured seed, shared across conditions for comparison; identical seeds do not guarantee identical outputs across different hardware or server builds. Record the GGUF filename, quantization, server version and runtime options when conducting the study. Set thinking/chat-template options consistently on the servers as appropriate for each model.
 
 ## Collect an experiment across models
 
-Run these simulation commands separately, after starting the corresponding server with `python start_server.py MODEL`. Stop each server before starting the next on a machine that fits one model at a time:
+Alternatively, run these simulation commands separately with manually managed servers, after starting the corresponding server with `python start_server.py MODEL`. Stop each server before starting the next on a machine that fits one model at a time:
 
 ```bash
 python simulate.py --model gemma --output-folder "Output Experiment 1"
@@ -159,33 +198,63 @@ Omitting `--mode` means all three modes for that model. Adding `--mode baseline`
 
 ## Output
 
-With no override, one `Output_<timestamp>` folder is created in the repository per invocation and its path is printed. All selected modes share it:
+With no override, one `Output_<timestamp>` folder is created per invocation. An explicit `--output-folder` lets separate model/mode invocations and both experiment types share a parent without mixing their CSVs:
 
 ```text
 Output_<timestamp>/
-  baseline/
-    gemma.csv
-    qwen.csv
-    ministral.csv
-  prompt-prepend/
-    gemma.csv
-    qwen.csv
-    ministral.csv
-  prompt-prepend-once/
-    gemma.csv
-    qwen.csv
-    ministral.csv
+  multi-turn/
+    baseline/<model>.csv
+    prompt-prepend/<model>.csv
+    prompt-prepend-once/<model>.csv
+    server-logs/<model>.log
+  single-turn/
+    baseline/<model>.csv
+    prompt-prepend/<model>.csv
+    prompt-prepend-once/<model>.csv
+    server-logs/<model>.log
 ```
 
-The tree above is the completed experiment after three separate model invocations. Each invocation creates only the selected model’s CSV in each selected mode. A baseline CSV contains only that model’s baseline runs; each personalized CSV contains all its personas and runs. One row represents one question-answer turn. Columns include model/API ID, server URL, persona and exact persona text, system prompt, mode, run ID/number, turn, question, exact user message, response, finish reason, optional reasoning content, generation settings, seed and UTC timestamp.
+Only the selected experiment, models, and modes are created. Old output folders are not migrated. Each CSV includes all topics for one model/mode and all relevant personas. One row represents one question-answer request. Both scripts use these columns in order:
 
-Per model, five runs give 5 baseline conversations and 15 conversations for each personalized mode: 35 conversations total. With N questions, its baseline CSV has 5 × N rows and each personalized CSV has 15 × N rows. Across three separate model invocations, the full experiment has nine CSVs, 105 conversations and 105 × N rows.
+```text
+model,mode,persona,question_file_name,question_number,run_id,run_number,turn,question,user_message,response,timestamp
+```
 
-CSV targets are checked before inference. Existing target files are not overwritten or appended; other mode folders can be added to the same parent. Responses are saved after each conversation and again on an ordinary error or keyboard interruption. Failed experiments exit with an error and may leave partial CSVs; rerun in a fresh folder. There are no retries or resume behavior. Forced termination or power loss can lose the current conversation. `finish_reason=length` indicates the answer hit a generation limit and should be inspected before analysis.
+`question_file_name` is the source basename. `question_number` combines the filename's topic suffix with its one-based non-empty-line position: `question_book.txt` produces `book_1`, `book_2`, etc. `turn` is the numeric position within that topic, starting at 1. `question` stores the original stripped question; `user_message` includes any persona prefix; `response` is the assistant answer; `timestamp` is UTC.
+
+`run_id` is `<experiment>/<model>/<mode>/<topic>/<persona>/<run_number>`, for example `multi-turn/gemma/prompt-prepend/book/American/1`. Baseline uses `baseline` as its persona. In single-turn output, this ID groups a repetition batch of independent requests; it does not imply shared history. `run_number` distinguishes repetitions. IDs are scoped to an output experiment; question text should be checked when combining results from different input versions.
+
+The CSV omits finish reason, reasoning content, API model, server URL, persona prompt, system prompt, seed, temperature, `top_p`, and `max_tokens`. Generation settings still come from the configuration and existing CLI overrides.
+
+With four topics, ten questions each, three models, three personas, and five repetitions, each script produces nine CSVs and 4,200 response rows: 600 baseline rows plus 1,800 rows for each personalized mode. Multi-turn and single-turn results remain separate. Analysis, embedding models, baseline matching, and plots will be added later.
+
+CSV targets are checked before inference. Existing files are not overwritten or appended; different models or modes can be added to the same parent. Multi-turn responses are saved after each conversation; single-turn responses are saved after each request. Both also save completed responses on an ordinary error or keyboard interruption. Failed experiments may leave partial CSVs; rerun in a fresh folder. There are no retries or resume behavior. Forced termination or power loss can lose unsaved responses.
 
 Weights, default output folders, CSV files, local configuration and virtual environments are ignored by Git. Input text is tracked, so use study personas rather than private participant data if publishing the repository.
 
-Single-turn CSVs use the same mode/model output layout as `simulate.py`, with `baseline/` and `prompt-prepend/` folders. For example, five runs with N questions yield 20 × N total rows across the two mode files (5 × N baseline plus 15 × N persona-prepended). Existing CSV targets are protected from overwrite.
+### Progress logs
+
+Both scripts always print file extraction counts, question ID ranges, the total input count, output location, experiment summary, model/mode/topic starts, and each repetition's start and completion. Messages are flushed immediately:
+
+```text
+Extracted 10 questions from question_book.txt | topic=book | IDs=book_1..book_10
+Extracted 10 questions from question_food.txt | topic=food | IDs=food_1..food_10
+Loaded 40 questions from 4 files.
+Starting model=gemma | experiment=multi-turn
+Starting mode=prompt-prepend | model=gemma
+Starting topic=book | file=question_book.txt | questions=10
+Starting run | model=gemma | mode=prompt-prepend | topic=book | persona=American | run=1/5
+Completed run | model=gemma | mode=prompt-prepend | topic=book | persona=American | run=1/5 | responses=10
+```
+
+Add `--verbose` to list every extracted question's filename, ID, and full text once during loading, plus each request's start and completion with its condition, repetition, and question ID:
+
+```bash
+python simulate.py --mode prompt-prepend --model all --manage-servers --verbose
+python simulate_single_turn.py --mode prompt-prepend --model all --manage-servers --verbose
+```
+
+Verbose console logs do not include assistant answers or persona prompt text. Server diagnostics stay in the server log files. Failed or interrupted runs report the error without a successful run or experiment completion message.
 
 ## Development checks
 

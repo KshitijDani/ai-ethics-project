@@ -48,13 +48,16 @@ class SimulationTests(unittest.TestCase):
         url = f'http://127.0.0.1:{self.server.server_port}/v1'
         self.config = self.root / 'config.json'
         self.config.write_text(json.dumps({'models': {m: {'base_url': url, 'api_model': m} for m in ('gemma', 'qwen', 'ministral')}, 'runs': 2}))
-        self.questions = self.root / 'questions.txt'
+        self.questions_folder = self.root / 'data'
+        self.questions_folder.mkdir()
+        self.questions = self.questions_folder / 'question_book.txt'
         self.questions.write_text('Question one\n\nQuestion two\n')
         self.personas = self.root / 'Personas'
         self.personas.mkdir()
         for name in simulate.PERSONAS:
             (self.personas / f'{name}.txt').write_text(f'I am {name}.\nMy second paragraph.')
-        self.output = self.root / 'Output Test'
+        self.output_parent = self.root / 'Output Test'
+        self.output = self.output_parent / 'multi-turn'
 
     def stop_server(self):
         self.server.shutdown()
@@ -62,7 +65,7 @@ class SimulationTests(unittest.TestCase):
         self.thread.join()
 
     def args(self, *extra):
-        return simulate.arguments(['--model', 'gemma', '--config', str(self.config), '--questions', str(self.questions), '--personas-folder', str(self.personas), '--output-folder', str(self.output), *extra])
+        return simulate.arguments(['--model', 'gemma', '--config', str(self.config), '--questions-folder', str(self.questions_folder), '--personas-folder', str(self.personas), '--output-folder', str(self.output_parent), *extra])
 
     def run_args(self, *extra):
         with contextlib.redirect_stdout(io.StringIO()):
@@ -165,7 +168,7 @@ class SimulationTests(unittest.TestCase):
             self.assertEqual(request['messages'][0], {'role': 'system', 'content': config['system_prompt']})
             self.assertEqual(sum(m['role'] == 'system' for m in request['messages']), 1)
         for csv_path in self.output.rglob('*.csv'):
-            self.assertEqual(set(pd.read_csv(csv_path).system_prompt), {config['system_prompt']})
+            self.assertNotIn('system_prompt', pd.read_csv(csv_path).columns)
 
     def test_empty_system_prompt_and_invalid_type(self):
         config = json.loads(self.config.read_text())
