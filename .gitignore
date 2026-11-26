@@ -8,3 +8,5 @@ Output*/
 outputs/
 *.csv
 models/
+# Include experiment CSV results in Git.
+!results/**/*.csv
