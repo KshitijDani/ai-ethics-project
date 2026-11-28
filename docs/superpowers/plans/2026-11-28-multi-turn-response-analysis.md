@@ -80,3 +80,9 @@
 - Verified all 4,200 stored 768-dimensional vectors and all nine enriched CSVs: original fields exactly match Git HEAD. Pairing reused 2,595 unique CSV embeddings without encoder loading or new inference.
 - Verified manifests against final source hashes; maximum error in the mathematical relationship between the two mean metrics was 9.992e-16. Inspected matching average and pairing plots visually.
 - Independent reviewer findings fixed with reproducing tests; no material findings or deferred minor items remain. Work remains uncommitted on `scripts`, as intended for review.
+
+## Combined-plot amendment — completed
+
+- User requested both personalized modes in one graph for each model/topic. Updated the shared plotter to overlay all six persona/mode combinations, using color for persona and line/marker style for mode, plus both baseline references. The current layout produces 12 graphs per method.
+- Added a regression test proving both modes and all personas share one figure, with consistent persona colors and distinct mode styles; watched it fail with two plots before the change, then pass.
+- Full suite: 64/64 passed. Regenerated both methods under `analysis_outputs/combined/`, reusing all stored vectors with no new embeddings or source CSV edits. Verified 12 PNGs per method, unchanged summary tables, and visually inspected Qwen/books.

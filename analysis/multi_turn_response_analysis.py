@@ -197,14 +197,15 @@ def plot_summaries(summary, output, consistency):
     for index, persona in enumerate(sorted(summary.persona.unique())):
         palette.setdefault(persona, plt.get_cmap('tab20')(index % 20))
     plots = []
-    for (model, filename, mode), group in summary.groupby(['model', 'question_file_name', 'mode']):
+    styles = {'prompt-prepend': ('-', 'o'), 'prompt-prepend-once': ('--', '^')}
+    for (model, filename), group in summary.groupby(['model', 'question_file_name']):
         topic = Path(filename).stem.removeprefix('questions_')
         baseline = consistency[(consistency.model == model)
                                & (consistency.question_file_name == filename)
                                & (consistency['mode'] == 'baseline')].set_index('turn').sort_index()
         last_turn = max(int(group.turn.max()), int(baseline.index.max()))
-        fig, axis = plt.subplots(figsize=(10, 6), layout='constrained')
-        for persona, curve in group.groupby('persona'):
+        fig, axis = plt.subplots(figsize=(11, 6.8), layout='constrained')
+        for (persona, mode), curve in group.groupby(['persona', 'mode']):
             curve = curve.sort_values('turn')
             # Include absent integer turns as NaN so a line does not bridge missing data.
             curve = curve.set_index('turn').reindex(range(1, last_turn + 1))
@@ -212,18 +213,19 @@ def plot_summaries(summary, output, consistency):
             y = curve.mean_similarity.to_numpy()
             sd = curve.std_similarity.to_numpy()
             color = palette[persona]
-            axis.plot(x, y, marker='o', linewidth=1.8, markersize=4,
-                      color=color, label=persona)
+            linestyle, marker = styles[mode]
+            axis.plot(x, y, marker=marker, linestyle=linestyle, linewidth=1.8, markersize=4,
+                      color=color, label=f'{persona} · {mode}')
             axis.fill_between(x, np.clip(y - sd, -1, 1), np.clip(y + sd, -1, 1),
-                              color=color, alpha=0.13, linewidth=0)
+                              color=color, alpha=0.08, linewidth=0)
         baseline = baseline.reindex(range(1, last_turn + 1))
-        axis.plot(baseline.index, baseline.mean_similarity, '--', color='#333333',
-                  linewidth=1.5, label='Baseline consistency (distinct run pairs)')
+        axis.plot(baseline.index, baseline.mean_similarity, ':', color='#333333', marker='s',
+                  markersize=3, linewidth=1.5, label='Baseline consistency (distinct run pairs)')
         axis.axhline(1, color='#888888', linestyle=':', linewidth=1,
                      label='Perfect similarity (1)')
         method = group.method.iloc[0]
         method_name = 'Average baseline embedding' if method == 'average' else 'All persona–baseline response pairs'
-        axis.set_title(f'{model.title()} · {topic.replace("_", " ").title()} · {mode}\n'
+        axis.set_title(f'{model.title()} · {topic.replace("_", " ").title()} · Both personalization modes\n'
                        f'{method_name}', loc='left', fontsize=13, pad=14)
         axis.set_xlabel('Turn / question position within topic')
         axis.set_ylabel('Cosine similarity to matched baseline')
@@ -231,13 +233,13 @@ def plot_summaries(summary, output, consistency):
         axis.set_xticks(range(1, last_turn + 1))
         axis.grid(axis='y', color='#e5e5e5', linewidth=0.7)
         axis.spines[['top', 'right']].set_visible(False)
-        axis.legend(loc='lower left', fontsize=8, framealpha=0.92)
+        axis.legend(loc='lower left', fontsize=8, framealpha=0.92, ncols=2)
         fig.supxlabel('Shading: ±1 descriptive SD, clipped to cosine bounds; not a confidence interval.\n'
                       'Questions change with turn; similarity alone does not establish persona adherence or causation.',
                       fontsize=8, color='#555555')
         slug = re.sub(r'[^A-Za-z0-9_-]', '_', topic)
         suffix = hashlib.sha256(filename.encode()).hexdigest()[:8]
-        relative = Path('plots') / f'{model}__{slug}-{suffix}__{mode}.png'
+        relative = Path('plots') / f'{model}__{slug}-{suffix}__comparison.png'
         (output / relative).parent.mkdir(parents=True, exist_ok=True)
         fig.savefig(output / relative, dpi=160)
         plt.close(fig)
@@ -306,6 +308,7 @@ def analyze(method, args):
         status='complete', method=method, created_utc=datetime.now(timezone.utc).isoformat(),
         inputs=input_records, response_count=len(frame), score_count=len(scores),
         summary_count=len(summary), consistency_count=len(consistency), enriched_files=enriched_files,
+        plot_layout='One graph per model/topic, overlaying all personas and personalized modes.',
         embedding=metadata, python_version=platform.python_version(),
         packages={name: version(name) for name in ['pandas', 'numpy', 'matplotlib']},
         command=sys.argv, arguments={key: str(value) if isinstance(value, Path) else

@@ -62,8 +62,12 @@ or per-pair scores, per-question summaries, PNG plots, and a manifest recording
 inputs and embedding configuration. Source CSVs may be enriched with embedding
 columns under the user's subsequent request; preserve all original fields.
 
-One main graph per generating model, topic, and personalized mode shows turn
-on the x-axis and cosine similarity on the y-axis, with one line per persona.
+One main graph per generating model and topic shows turn on the x-axis and
+cosine similarity on the y-axis, with one line per persona/mode combination.
+Overlay both personalized modes on the same axes: use persona colors, solid
+circle-marked repeated-persona lines, and dashed triangle-marked once-only lines.
+The complete dataset produces 12 graphs per method, each with six comparison
+curves plus baseline consistency and perfect-similarity references.
 Use the same axis limits and persona colors for both methods. Include a
 horizontal perfect-similarity reference at 1 and an actual baseline consistency
 line: mean cosine over distinct baseline-to-baseline pairs, excluding self-pairs.

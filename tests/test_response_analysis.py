@@ -411,6 +411,37 @@ class CommandTests(unittest.TestCase):
         self.assertEqual(baseline[1], [1, 2])
         self.assertEqual(baseline[2], [1, 1])
 
+    def test_one_model_topic_plot_contains_both_modes_and_all_personas(self):
+        frame = fixture_rows()
+        frame['source_file'] = 'fixture'
+        frame['source_row'] = np.arange(1, len(frame) + 1)
+        _, summary, consistency = analysis.score_responses(
+            frame, np.tile([1., 0.], (len(frame), 1)), 'average')
+        combined = pd.concat([
+            summary.assign(mode=mode, persona=persona)
+            for mode in ('prompt-prepend', 'prompt-prepend-once')
+            for persona in ('American', 'Chinese', 'French')
+        ], ignore_index=True)
+        from matplotlib.figure import Figure
+        saved = []
+        original = Figure.savefig
+
+        def capture(figure, *args, **kwargs):
+            saved.append({line.get_label(): (line.get_color(), line.get_linestyle())
+                          for line in figure.axes[0].lines})
+            return original(figure, *args, **kwargs)
+
+        with patch.object(Figure, 'savefig', new=capture):
+            plots = analysis.plot_summaries(combined, self.root / 'combined', consistency)
+        self.assertEqual(len(plots), 1)
+        self.assertEqual(len(saved), 1)
+        for persona in ('American', 'Chinese', 'French'):
+            repeated = saved[0][f'{persona} · prompt-prepend']
+            once = saved[0][f'{persona} · prompt-prepend-once']
+            self.assertEqual(repeated[0], once[0])
+            self.assertNotEqual(repeated[1], once[1])
+        self.assertEqual(len(saved[0]), 8)  # six comparisons and two baseline references
+
 
 if __name__ == '__main__':
     unittest.main()

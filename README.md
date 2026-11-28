@@ -336,9 +336,9 @@ Each method writes:
 | `consistency.csv` | Within-condition consistency over distinct run pairs, including baseline; excludes self-pairs |
 | `coverage.csv` | Responses, run counts, complete runs, and missing turns per model/topic/condition |
 | `manifest.json` | Input hashes, encoder revision/configuration, code hashes, package versions, plot list, and interpretation notes |
-| `plots/*.png` | One graph per model, topic, and personalized mode, using consistent colors and cosine axes |
+| `plots/*.png` | One graph per model/topic, showing both personalized modes and all personas against baseline |
 
-For the current complete dataset, each method creates 24 graphs and 720 summary
+For the current complete dataset, each method creates 12 graphs and 720 summary
 rows. The average method exports 3,600 individual scores; pairing exports 18,000
 scores (25 cross-run pairs per persona/question). Both export 840 within-condition
 consistency rows and 84 coverage rows. Pair counts are not independent sample
@@ -372,13 +372,19 @@ also reflects how concentrated the baseline responses are. The two methods are
 related summaries, rather than independent confirmations.
 
 On the graphs, higher values mean closer to the unpersonalized baseline. The
-dashed baseline consistency curve shows actual baseline-to-baseline similarity;
+dotted baseline consistency curve with square markers shows actual baseline-to-baseline similarity;
 the line at 1 is a perfect-similarity reference. For the average method, the
 baseline consistency curve is contextual pairwise variation, not the centroid's
 self-similarity. Shading shows ±1 descriptive sample SD, clipped to [-1, 1],
 and is not a confidence interval. Average-method SD describes persona-to-centroid
 scores; pairing SD describes all cross-run scores, which are dependent. Undefined
 spread or consistency for insufficient observations is left blank.
+
+Each graph overlays six persona/mode curves. Color identifies the persona;
+solid lines with circles identify `prompt-prepend`, and dashed lines with triangles
+identify `prompt-prepend-once`. Both modes share the same axes and baseline
+references, making their baseline-relative scores directly comparable. These
+curves do not compute a separate cosine similarity between the two modes.
 
 Our hypothesis is that personalization can weaken despite retained conversation
 history, potentially appearing as increasing baseline similarity, especially
