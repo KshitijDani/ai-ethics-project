@@ -1,0 +1,841 @@
+model,question_file_name,question_number,turn,question,mode,persona,run_count,pair_count,mean_similarity,std_similarity
+gemma,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,baseline,baseline,5,10,0.5556257629506718,0.1717560501870264
+gemma,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend,American,5,10,1.0,0.0
+gemma,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend,Chinese,5,10,1.0,0.0
+gemma,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend,French,5,10,1.0,0.0
+gemma,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend-once,American,5,10,1.0,0.0
+gemma,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend-once,Chinese,5,10,1.0,0.0
+gemma,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",baseline,baseline,5,10,0.8603968887499491,0.18022684165006259
+gemma,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend,American,5,10,0.9999999999999998,0.0
+gemma,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend,Chinese,5,10,0.9999999999999998,0.0
+gemma,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend,French,5,10,0.9999999999999998,0.0
+gemma,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend-once,American,5,10,0.9999999999999998,0.0
+gemma,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend-once,Chinese,5,10,0.7905953331249237,0.1802268416500626
+gemma,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend-once,French,5,10,0.9999999999999998,0.0
+gemma,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,baseline,baseline,5,10,1.0,0.0
+gemma,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend,American,5,10,0.61863118098165,0.20568974380132413
+gemma,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend,Chinese,5,10,0.8921572165201864,0.10483822477252423
+gemma,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend,French,5,10,0.4858606863153919,0.070802338033114
+gemma,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend-once,American,5,10,1.0,0.0
+gemma,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend-once,Chinese,5,10,1.0,0.0
+gemma,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,baseline,baseline,5,10,0.799699667185857,0.2585866177429928
+gemma,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend,American,5,10,0.6995495007787857,0.2585866177429928
+gemma,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend,Chinese,5,10,0.6995495007787857,0.2585866177429928
+gemma,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend,French,5,10,0.7996996671858572,0.2585866177429928
+gemma,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend-once,American,5,10,1.0,0.0
+gemma,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend-once,Chinese,5,10,0.6995495007787856,0.2585866177429928
+gemma,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,baseline,baseline,5,10,0.7994727030602354,0.2588796271692324
+gemma,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend,American,5,10,0.4967990908000157,0.18256308354199957
+gemma,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend,Chinese,5,10,1.0,0.0
+gemma,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend,French,5,10,0.5021511089081141,0.1815669865667796
+gemma,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend-once,American,5,10,0.7887437599978503,0.2727306331035742
+gemma,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend-once,Chinese,5,10,0.5683254976376187,0.2290125288656981
+gemma,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend-once,French,5,10,0.613988213532667,0.2677644613934252
+gemma,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,baseline,baseline,5,10,0.9999999999999998,1.1702778228589004e-16
+gemma,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend,American,5,10,0.9999999999999998,1.1702778228589004e-16
+gemma,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend,Chinese,5,10,0.9999999999999998,1.1702778228589004e-16
+gemma,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend,French,5,10,0.7268680228843533,0.23507457748569
+gemma,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend-once,American,5,10,0.9999999999999998,1.1702778228589004e-16
+gemma,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend-once,Chinese,5,10,0.9999999999999998,1.1702778228589004e-16
+gemma,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend-once,French,5,10,0.9999999999999998,1.1702778228589004e-16
+gemma,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,baseline,baseline,5,10,1.0,0.0
+gemma,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend,American,5,10,1.0,0.0
+gemma,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend,Chinese,5,10,1.0,0.0
+gemma,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend,French,5,10,1.0,0.0
+gemma,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend-once,American,5,10,1.0,0.0
+gemma,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend-once,Chinese,5,10,1.0,0.0
+gemma,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,baseline,baseline,5,10,0.8158854569580584,0.23769085299867593
+gemma,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend,American,5,10,0.710092653191772,0.3742687753771482
+gemma,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend,Chinese,5,10,0.9999999999999998,0.0
+gemma,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend,French,5,10,0.9999999999999998,0.0
+gemma,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend-once,American,5,10,0.9999999999999998,0.0
+gemma,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend-once,Chinese,5,10,0.8158854569580584,0.23769085299867593
+gemma,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend-once,French,5,10,0.9999999999999998,0.0
+gemma,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,baseline,baseline,5,10,1.0,0.0
+gemma,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend,American,5,10,1.0,0.0
+gemma,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend,Chinese,5,10,1.0,0.0
+gemma,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend,French,5,10,1.0,0.0
+gemma,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend-once,American,5,10,1.0,0.0
+gemma,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend-once,Chinese,5,10,1.0,0.0
+gemma,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,baseline,baseline,5,10,0.8047094093103448,0.2521190684706812
+gemma,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend,American,5,10,0.6690849666036633,0.28480631407859613
+gemma,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend,Chinese,5,10,0.609108820037026,0.21007910108372554
+gemma,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend,French,5,10,0.6376371021663965,0.25196620169652933
+gemma,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend-once,American,5,10,1.0,0.0
+gemma,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend-once,Chinese,5,10,0.7070641139655173,0.2521190684706812
+gemma,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",baseline,baseline,5,10,0.8452406208617026,0.11304771888787926
+gemma,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend,American,5,10,0.992335284697514,0.006596736604433226
+gemma,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend,Chinese,5,10,0.8473851208779744,0.17127489076973648
+gemma,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend,French,5,10,0.9048107358762906,0.11277873107674614
+gemma,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend-once,American,5,10,0.992335284697514,0.006596736604433226
+gemma,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend-once,Chinese,5,10,0.8473851208779744,0.17127489076973648
+gemma,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend-once,French,5,10,0.9048107358762906,0.11277873107674614
+gemma,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,baseline,baseline,5,10,0.7159788149760027,0.2307304490519638
+gemma,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend,American,5,10,0.8219885339401396,0.1614474567171834
+gemma,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend,Chinese,5,10,0.9488527594547911,0.04285496540823881
+gemma,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend,French,5,10,0.7926129795065808,0.1779013465332029
+gemma,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend-once,American,5,10,0.8040098647829724,0.18349529815859544
+gemma,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend-once,Chinese,5,10,1.0,0.0
+gemma,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend-once,French,5,10,0.778679366364932,0.18440376282598367
+gemma,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,baseline,baseline,5,10,0.6929400220984998,0.1857744947254478
+gemma,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend,American,5,10,0.7461842333720087,0.16133879733611373
+gemma,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend,Chinese,5,10,0.9875392485635922,0.010724507287652797
+gemma,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend,French,5,10,0.8051514961861403,0.16769889117878
+gemma,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend-once,American,5,10,0.8528689178311769,0.16800419465047867
+gemma,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend-once,Chinese,5,10,0.9723280556107319,0.035724326592270955
+gemma,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend-once,French,5,10,0.7884384322059428,0.17158002703726616
+gemma,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,baseline,baseline,5,10,1.0,0.0
+gemma,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend,American,5,10,1.0,0.0
+gemma,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend,Chinese,5,10,0.7991566879829312,0.13414048563043024
+gemma,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend,French,5,10,0.8347289386684265,0.12370708519952428
+gemma,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend-once,American,5,10,0.8181329741595441,0.145764368356606
+gemma,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend-once,Chinese,5,10,0.8578518555537753,0.1206803267916346
+gemma,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend-once,French,5,10,0.8766642608599865,0.15922575456048488
+gemma,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",baseline,baseline,5,10,0.8446290018486176,0.14158112894401287
+gemma,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend,American,5,10,0.7204816005376393,0.20979388849208613
+gemma,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend,Chinese,5,10,0.63233409431773,0.204442984567237
+gemma,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend,French,5,10,0.744902006182192,0.1853654990639369
+gemma,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend-once,American,5,10,0.9124804335382176,0.05998902465560879
+gemma,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend-once,Chinese,5,10,0.8853626352414757,0.06147322579443514
+gemma,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend-once,French,5,10,0.9260453677790622,0.08868937187000424
+gemma,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",baseline,baseline,5,10,0.9246770033996714,0.07901983083934365
+gemma,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend,American,5,10,0.8999976581685365,0.08261698511871678
+gemma,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend,Chinese,5,10,0.9962656926136656,0.0032139800704204945
+gemma,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend,French,5,10,0.9347347663680908,0.08425705431424
+gemma,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend-once,American,5,10,0.891121651034414,0.0854221712747722
+gemma,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend-once,Chinese,5,10,0.9332290202042559,0.08226753131401025
+gemma,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend-once,French,5,10,0.9248421129987061,0.07519894233048677
+gemma,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,baseline,baseline,5,10,0.6923817461927201,0.3935431094482291
+gemma,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend,American,5,10,0.9159049532351545,0.072377492359729
+gemma,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend,Chinese,5,10,0.9468633338367589,0.04020697854951745
+gemma,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend,French,5,10,0.9159049532351545,0.072377492359729
+gemma,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend-once,American,5,10,0.9966115589827165,0.0029163056954544173
+gemma,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend-once,Chinese,5,10,1.0,0.0
+gemma,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend-once,French,5,10,0.6923817461927202,0.3935431094482291
+gemma,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,baseline,baseline,5,10,0.7796781156189015,0.18929337784025832
+gemma,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend,American,5,10,0.9134718503051887,0.04840716803630925
+gemma,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend,Chinese,5,10,0.9084429472862908,0.04354836149036697
+gemma,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend,French,5,10,0.8717283677577663,0.12685467812831835
+gemma,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend-once,American,5,10,0.9147468527052769,0.046719939959788306
+gemma,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend-once,Chinese,5,10,0.9441896187402087,0.03103179180388699
+gemma,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend-once,French,5,10,0.8521233226112039,0.19090796960643128
+gemma,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,baseline,baseline,5,10,0.9578144784054203,0.03821930245192463
+gemma,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend,American,5,10,0.9232151838249459,0.05914655392519766
+gemma,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend,Chinese,5,10,0.9262160570663062,0.05027695088294067
+gemma,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend,French,5,10,0.9439520015285607,0.03409100316582948
+gemma,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend-once,American,5,10,0.942274997026343,0.0641750999851208
+gemma,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend-once,Chinese,5,10,0.9261012310398116,0.05418245093295491
+gemma,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend-once,French,5,10,0.8897470813009594,0.0790711786684604
+gemma,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,baseline,baseline,5,10,0.7320062340262252,0.22264779735646056
+gemma,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend,American,5,10,0.8387371403050639,0.20818945665342375
+gemma,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend,Chinese,5,10,0.7498258423209359,0.18145422801017566
+gemma,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend,French,5,10,0.8387371403050639,0.20818945665342375
+gemma,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend-once,American,5,10,0.7215187889826902,0.17157684936344492
+gemma,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend-once,Chinese,5,10,0.5886512958957076,0.235147989500339
+gemma,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend-once,French,5,10,0.6448497604983909,0.2154372379793806
+gemma,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,baseline,baseline,5,10,0.87540224643518,0.16085500817713455
+gemma,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend,American,5,10,0.7717759241881288,0.2946360149409854
+gemma,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend,Chinese,5,10,0.9854851728419117,0.012492374190301093
+gemma,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend,French,5,10,0.5819164911734305,0.30997940621225983
+gemma,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend-once,American,5,10,0.7717759241881288,0.2946360149409854
+gemma,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend-once,Chinese,5,10,0.9854851728419117,0.012492374190301093
+gemma,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend-once,French,5,10,0.5819164911734305,0.30997940621225983
+gemma,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,baseline,baseline,5,10,0.45272251270981956,0.39110631881616814
+gemma,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend,American,5,10,0.7894853939174205,0.11284325410468218
+gemma,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend,Chinese,5,10,0.6451919390048909,0.1465420631373507
+gemma,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend,French,5,10,0.7753099455784848,0.1180201830975866
+gemma,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend-once,American,5,10,0.8976896378624263,0.03454809723628348
+gemma,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend-once,Chinese,5,10,0.6987067032386747,0.20137199486485885
+gemma,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend-once,French,5,10,0.7693489219909735,0.10165227166334333
+gemma,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",baseline,baseline,5,10,0.9223005553382769,0.06687303448542606
+gemma,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend,American,5,10,0.7082401791354238,0.2527678202583171
+gemma,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend,Chinese,5,10,1.0,0.0
+gemma,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend,French,5,10,0.6913041549309492,0.34772388674852406
+gemma,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend-once,American,5,10,0.9482003702255181,0.06687303448542611
+gemma,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend-once,Chinese,5,10,0.7240868980560633,0.3562022829430983
+gemma,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend-once,French,5,10,0.7240868980560634,0.35620228294309847
+gemma,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,baseline,baseline,5,10,0.7793399699187233,0.18290682628929852
+gemma,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend,American,5,10,1.0,0.0
+gemma,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend,Chinese,5,10,1.0,0.0
+gemma,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend,French,5,10,1.0,0.0
+gemma,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend-once,American,5,10,0.7583711816127955,0.31194146319247285
+gemma,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend-once,Chinese,5,10,0.6044689291277663,0.18980647534366943
+gemma,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend-once,French,5,10,0.5355782420392688,0.23306298003140088
+gemma,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,baseline,baseline,5,10,0.6643222726965228,0.28704489971800917
+gemma,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend,American,5,10,0.9962238967210985,0.004874928370914937
+gemma,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend,Chinese,5,10,0.8784047499103762,0.15697879285834643
+gemma,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend,French,5,10,0.9337932737391782,0.07798629480813875
+gemma,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend-once,American,5,10,1.0,0.0
+gemma,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend-once,Chinese,5,10,0.5451941109115863,0.33986657252312685
+gemma,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend-once,French,5,10,0.6137891091412568,0.32208096407258663
+gemma,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,baseline,baseline,5,10,0.7509944853448246,0.19983855356034003
+gemma,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend,American,5,10,0.7421803489467005,0.18318337324554676
+gemma,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend,Chinese,5,10,0.5749207158579874,0.1754452896974993
+gemma,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend,French,5,10,0.7323130238831113,0.11828512384728064
+gemma,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend-once,American,5,10,0.7124708957634718,0.24746565161289125
+gemma,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend-once,Chinese,5,10,0.7023285807745873,0.21555798526238465
+gemma,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend-once,French,5,10,0.7839939754328237,0.23950771762735612
+gemma,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,baseline,baseline,5,10,0.5700705774368264,0.22831329038181333
+gemma,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend,American,5,10,1.0,0.0
+gemma,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend,Chinese,5,10,0.8626204394552236,0.17735625003307076
+gemma,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend,French,5,10,1.0,0.0
+gemma,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend-once,American,5,10,0.5820972624212574,0.2215949355837241
+gemma,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend-once,Chinese,5,10,0.7972212068967958,0.26178629621758315
+gemma,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",baseline,baseline,5,10,0.6631528685819859,0.26494088910807456
+gemma,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend,American,5,10,0.6413659936903218,0.25052136468876357
+gemma,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend,Chinese,5,10,0.7531782300071195,0.18037892231559172
+gemma,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend,French,5,10,0.7213582564620615,0.20257429092777499
+gemma,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend-once,American,5,10,0.6143708297208212,0.33189674540067626
+gemma,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend-once,Chinese,5,10,0.6585579663690284,0.2938665133217658
+gemma,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend-once,French,5,10,0.8154797519927655,0.23821461585669387
+gemma,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,baseline,baseline,5,10,0.7199686291266818,0.273335125853991
+gemma,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend,American,5,10,0.6282549419027789,0.1866837105564147
+gemma,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend,Chinese,5,10,0.7673342140239093,0.1904519303073546
+gemma,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend,French,5,10,0.7156202936489648,0.07710446459670015
+gemma,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend-once,American,5,10,0.8391486764864426,0.13843877715187297
+gemma,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend-once,Chinese,5,10,0.6844084408420212,0.12738579813754972
+gemma,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend-once,French,5,10,0.6940762908922649,0.14865160297645444
+gemma,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,baseline,baseline,5,10,0.891854373348665,0.10235941649652916
+gemma,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend,American,5,10,0.6619304500440338,0.27336242046897363
+gemma,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend,Chinese,5,10,0.652941803354129,0.20140295849600148
+gemma,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend,French,5,10,0.8124225850590095,0.10263700037213186
+gemma,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend-once,American,5,10,0.790880262630583,0.09831521679906645
+gemma,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend-once,Chinese,5,10,0.6685017684793738,0.20615619661938756
+gemma,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend-once,French,5,10,0.8707836578451171,0.07262259984996249
+gemma,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",baseline,baseline,5,10,0.6653885565872876,0.4150700598087945
+gemma,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend,Chinese,5,10,0.8878802359419933,0.14474599299245508
+gemma,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend-once,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend-once,Chinese,5,10,0.8878802359419933,0.14474599299245508
+gemma,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,baseline,baseline,5,10,0.9166834761265473,0.10756116980859161
+gemma,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend,Chinese,5,10,0.9166834761265473,0.10756116980859154
+gemma,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend-once,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend-once,Chinese,5,10,0.9166834761265473,0.10756116980859154
+gemma,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,baseline,baseline,5,10,0.9573361773735302,0.05507875817262159
+gemma,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend,Chinese,5,10,0.9155588561570973,0.10901304794608901
+gemma,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend-once,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend-once,Chinese,5,10,0.9573361773735302,0.05507875817262159
+gemma,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,baseline,baseline,5,10,0.6924911256321923,0.193888758791532
+gemma,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend,Chinese,5,10,0.951642151446056,0.06242971403594832
+gemma,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend-once,American,5,10,0.7825752477628789,0.1871294321039208
+gemma,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend-once,Chinese,5,10,0.7900833367462788,0.27100124695769745
+gemma,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,baseline,baseline,5,10,0.6727245681368718,0.4225107657429116
+gemma,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend,Chinese,5,10,0.8902506548541321,0.14168579533570536
+gemma,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend-once,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend-once,Chinese,5,10,0.6863857120611843,0.40487430477324365
+gemma,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,baseline,baseline,5,10,0.8788343846507651,0.15642413679352024
+gemma,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend,Chinese,5,10,0.8788343846507651,0.15642413679352024
+gemma,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend-once,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend-once,Chinese,5,10,0.8788343846507651,0.15642413679352024
+gemma,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,baseline,baseline,5,10,0.7726900698312136,0.21089841000363524
+gemma,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend,American,5,10,0.7703748630350779,0.19762985140794237
+gemma,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend,Chinese,5,10,0.9389928010935005,0.07875995512121206
+gemma,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend,French,5,10,0.7703748630350779,0.19762985140794237
+gemma,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend-once,American,5,10,0.8469165753567186,0.1976298514079424
+gemma,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend-once,Chinese,5,10,0.9389928010935005,0.07875995512121206
+gemma,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,baseline,baseline,5,10,0.9432837705557688,0.07322033736572862
+gemma,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend,Chinese,5,10,0.9183529980139227,0.10540582631994719
+gemma,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend-once,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend-once,Chinese,5,10,0.9432837705557688,0.07322033736572862
+gemma,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,baseline,baseline,5,10,0.8288736555328386,0.22092316073955667
+gemma,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend,Chinese,5,10,0.8288736555328384,0.22092316073955662
+gemma,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend-once,American,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend-once,Chinese,5,10,0.9418028378360571,0.07513221328582786
+gemma,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend-once,French,5,10,1.0,0.0
+gemma,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,baseline,baseline,5,10,0.5353532923289093,0.34123651799825283
+gemma,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend,American,5,10,0.7711242967095814,0.19698484159895566
+gemma,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend,Chinese,5,10,0.9302321918251822,0.09006985305415427
+gemma,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend,French,5,10,0.9999999999999998,0.0
+gemma,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend-once,American,5,10,0.6309077704872299,0.27435385951464597
+gemma,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend-once,Chinese,5,10,0.9302321918251822,0.09006985305415427
+gemma,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend-once,French,5,10,1.0,0.0
+ministral,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,baseline,baseline,5,10,0.8062079240670854,0.08017051892517484
+ministral,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend,American,5,10,0.6095836400533554,0.13008621066455717
+ministral,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend,Chinese,5,10,0.6899879926375697,0.10226268404399663
+ministral,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend,French,5,10,0.603895878945375,0.16365660706579108
+ministral,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend-once,American,5,10,0.6095836400533554,0.13008621066455717
+ministral,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend-once,Chinese,5,10,0.6899879926375697,0.10226268404399663
+ministral,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend-once,French,5,10,0.603895878945375,0.16365660706579108
+ministral,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",baseline,baseline,5,10,0.7473509171528387,0.19875081010558035
+ministral,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend,American,5,10,0.5666059088754729,0.26891967068211536
+ministral,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend,Chinese,5,10,0.5177080474765661,0.20553812863565477
+ministral,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend,French,5,10,0.6651277100651976,0.22281414907398284
+ministral,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend-once,American,5,10,0.9205169461036073,0.024307666056973983
+ministral,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend-once,Chinese,5,10,0.8532360880015155,0.07337135272386382
+ministral,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend-once,French,5,10,0.9356350724638688,0.01795103510318959
+ministral,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,baseline,baseline,5,10,0.599324596925616,0.13878265585074706
+ministral,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend,American,5,10,0.9249011595224909,0.02281411588170365
+ministral,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend,Chinese,5,10,0.8538039806415982,0.061884191114776325
+ministral,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend,French,5,10,0.7411493321258156,0.1558207936295195
+ministral,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend-once,American,5,10,0.8048638965958961,0.13714396705970153
+ministral,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend-once,Chinese,5,10,0.8975027458874896,0.05505440837530425
+ministral,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend-once,French,5,10,0.781197609659303,0.16554160302909016
+ministral,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,baseline,baseline,5,10,0.6571230408649968,0.20019059020148486
+ministral,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend,American,5,10,0.5459549662195619,0.19385200300699865
+ministral,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend,Chinese,5,10,0.5135562105582997,0.15011625938341733
+ministral,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend,French,5,10,0.47677208151607237,0.14560173568101653
+ministral,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend-once,American,5,10,0.474697354408572,0.08037484022356084
+ministral,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend-once,Chinese,5,10,0.6139968321615557,0.21919630692674016
+ministral,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend-once,French,5,10,0.6140966090033367,0.22921997354579932
+ministral,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,baseline,baseline,5,10,0.7263431464369855,0.26515191365901203
+ministral,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend,American,5,10,0.5728844984659605,0.2603137762658969
+ministral,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend,Chinese,5,10,0.6486074493331018,0.18326839406383003
+ministral,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend,French,5,10,0.47834849464439183,0.08541128847234626
+ministral,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend-once,American,5,10,0.5749153870378111,0.23802984446323555
+ministral,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend-once,Chinese,5,10,0.5655273172957463,0.2241349902821106
+ministral,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend-once,French,5,10,0.5262216181369948,0.14631080293234508
+ministral,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,baseline,baseline,5,10,0.920606000453619,0.029085023475342676
+ministral,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend,American,5,10,0.8920784573691556,0.043370337471916924
+ministral,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend,Chinese,5,10,0.7940934638482157,0.12621438074219604
+ministral,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend,French,5,10,0.7614661841274278,0.11796445275575146
+ministral,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend-once,American,5,10,0.8869622331750021,0.0438280328368985
+ministral,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend-once,Chinese,5,10,0.8463554244549737,0.0874877801795704
+ministral,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend-once,French,5,10,0.9318499663705128,0.021307843959330997
+ministral,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,baseline,baseline,5,10,0.7437697803629495,0.2604280841746516
+ministral,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend,American,5,10,0.55607705392568,0.1932173550219761
+ministral,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend,Chinese,5,10,0.6445273988450223,0.16046364945797414
+ministral,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend,French,5,10,0.5666199127277846,0.06501189557731334
+ministral,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend-once,American,5,10,0.599518266979788,0.19811640320214205
+ministral,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend-once,Chinese,5,10,0.9001811491597259,0.03803596186550031
+ministral,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend-once,French,5,10,0.6401378063850466,0.23640596190699784
+ministral,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,baseline,baseline,5,10,0.7952078757488978,0.1735977343914065
+ministral,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend,American,5,10,0.6125225009108061,0.12425508866870683
+ministral,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend,Chinese,5,10,0.8009291456880077,0.14952805571644018
+ministral,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend,French,5,10,0.6656582921167626,0.16365492135580634
+ministral,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend-once,American,5,10,0.7536741129645365,0.19251712253417208
+ministral,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend-once,Chinese,5,10,0.80742219805525,0.14968085056150315
+ministral,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend-once,French,5,10,0.7823221283073156,0.17106000560920298
+ministral,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,baseline,baseline,5,10,0.9161173018834361,0.036543949341291605
+ministral,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend,American,5,10,0.711019563944842,0.13842753493492
+ministral,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend,Chinese,5,10,0.8596544319092464,0.05008562021603293
+ministral,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend,French,5,10,0.720811587043312,0.14391975099959026
+ministral,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend-once,American,5,10,0.8839488033272431,0.06889700034934675
+ministral,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend-once,Chinese,5,10,0.8877942314833435,0.04066865348531647
+ministral,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend-once,French,5,10,0.9172820546307742,0.045459895252606755
+ministral,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,baseline,baseline,5,10,0.5748263926942891,0.19690851672809176
+ministral,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend,American,5,10,0.649956549007734,0.1666695549415526
+ministral,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend,Chinese,5,10,0.46291294992266446,0.06663048361580096
+ministral,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend,French,5,10,0.6073933373037442,0.16618243574062858
+ministral,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend-once,American,5,10,0.6121422342030529,0.23496345013850334
+ministral,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend-once,Chinese,5,10,0.6318202143394857,0.19860506924538462
+ministral,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend-once,French,5,10,0.4832992684350178,0.15359788585294068
+ministral,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",baseline,baseline,5,10,0.7583942772118105,0.12153195172719738
+ministral,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend,American,5,10,0.7472338978267177,0.1025984302229189
+ministral,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend,Chinese,5,10,0.6454129689134609,0.1218565611996313
+ministral,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend,French,5,10,0.5620259294071217,0.10848326919832038
+ministral,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend-once,American,5,10,0.7472338978267177,0.1025984302229189
+ministral,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend-once,Chinese,5,10,0.6454129689134609,0.1218565611996313
+ministral,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend-once,French,5,10,0.5620259294071217,0.10848326919832038
+ministral,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,baseline,baseline,5,10,0.8636742031332293,0.05074232135852004
+ministral,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend,American,5,10,0.8231646834623267,0.06275212035832166
+ministral,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend,Chinese,5,10,0.845268706499113,0.045184082376343894
+ministral,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend,French,5,10,0.8173543253055783,0.057023930080603864
+ministral,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend-once,American,5,10,0.8702376637507131,0.04930585678582833
+ministral,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend-once,Chinese,5,10,0.8986786841795048,0.0637928101321941
+ministral,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend-once,French,5,10,0.8664081648801825,0.0409277829077099
+ministral,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,baseline,baseline,5,10,0.8340890421981927,0.10975497898339717
+ministral,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend,American,5,10,0.7872462993517761,0.07074348217336397
+ministral,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend,Chinese,5,10,0.7733829858823998,0.12107725543584398
+ministral,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend,French,5,10,0.7556381091906061,0.05531671751821937
+ministral,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend-once,American,5,10,0.820313809766094,0.08393869762531754
+ministral,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend-once,Chinese,5,10,0.7517823638632483,0.11407484012344078
+ministral,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend-once,French,5,10,0.78290165460323,0.06405265025304945
+ministral,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,baseline,baseline,5,10,0.6531327314961652,0.23901029378654073
+ministral,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend,American,5,10,0.6246739633941271,0.08878562353141596
+ministral,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend,Chinese,5,10,0.736717992003056,0.06583198285509229
+ministral,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend,French,5,10,0.5356724236413627,0.14337677322466352
+ministral,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend-once,American,5,10,0.5137146216897226,0.15650409930200573
+ministral,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend-once,Chinese,5,10,0.6985046274475782,0.10394429537121269
+ministral,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend-once,French,5,10,0.5815996001082565,0.18637603291306234
+ministral,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",baseline,baseline,5,10,0.7967720838291622,0.07967954495695595
+ministral,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend,American,5,10,0.7846697137452225,0.0505382738433767
+ministral,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend,Chinese,5,10,0.8171192274932106,0.06107523637860123
+ministral,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend,French,5,10,0.7115113648754553,0.14719449233032522
+ministral,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend-once,American,5,10,0.7614382755436477,0.08762335173317459
+ministral,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend-once,Chinese,5,10,0.857391462754028,0.06024730339170878
+ministral,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend-once,French,5,10,0.7797250377722298,0.10461935928924511
+ministral,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",baseline,baseline,5,10,0.9334197217066917,0.018578112481743788
+ministral,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend,American,5,10,0.8858244008683057,0.051742446432559916
+ministral,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend,Chinese,5,10,0.8516857840553163,0.04664123562417031
+ministral,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend,French,5,10,0.7846847479875046,0.11083645598049756
+ministral,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend-once,American,5,10,0.9215086224808934,0.020444432330739334
+ministral,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend-once,Chinese,5,10,0.9096019722047174,0.02068687937721334
+ministral,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend-once,French,5,10,0.8827049930307569,0.027215128203241307
+ministral,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,baseline,baseline,5,10,0.7706336122926836,0.09787942464542414
+ministral,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend,American,5,10,0.8397468411241841,0.04482726925948081
+ministral,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend,Chinese,5,10,0.8670865148171808,0.04493412130883479
+ministral,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend,French,5,10,0.8227609141060809,0.08319339707417178
+ministral,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend-once,American,5,10,0.7796281064062011,0.06557447849246598
+ministral,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend-once,Chinese,5,10,0.8018930613457821,0.07839669406640065
+ministral,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend-once,French,5,10,0.7653470044991538,0.10060325910377065
+ministral,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,baseline,baseline,5,10,0.7852258617872581,0.08350834169783274
+ministral,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend,American,5,10,0.7441199458256957,0.08729226713724676
+ministral,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend,Chinese,5,10,0.6869523824951835,0.13779897924951556
+ministral,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend,French,5,10,0.6555326627451443,0.10154600533346095
+ministral,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend-once,American,5,10,0.6863961830639098,0.13187930138978776
+ministral,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend-once,Chinese,5,10,0.685847210144286,0.07756396958704219
+ministral,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend-once,French,5,10,0.7259106951919915,0.09270635369217572
+ministral,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,baseline,baseline,5,10,0.8658690906456636,0.04807777061973963
+ministral,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend,American,5,10,0.8478335088406415,0.0793355285583141
+ministral,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend,Chinese,5,10,0.8916613718767602,0.03971086578163566
+ministral,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend,French,5,10,0.8919946854162631,0.02569011465209165
+ministral,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend-once,American,5,10,0.866016918876845,0.048205350295444406
+ministral,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend-once,Chinese,5,10,0.865794201062393,0.058794694694249326
+ministral,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend-once,French,5,10,0.8068114235023225,0.08551983165419708
+ministral,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,baseline,baseline,5,10,0.8295992107153584,0.056465006645706216
+ministral,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend,American,5,10,0.7762214274887264,0.07728969035517264
+ministral,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend,Chinese,5,10,0.8554873237751541,0.0278672421058929
+ministral,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend,French,5,10,0.8121169725048725,0.07666524301055293
+ministral,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend-once,American,5,10,0.8167155821344718,0.03308724572946765
+ministral,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend-once,Chinese,5,10,0.7966559169772435,0.0741973370082105
+ministral,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend-once,French,5,10,0.8414865656966702,0.04754492655851677
+ministral,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,baseline,baseline,5,10,0.6807078762261018,0.13258991274423979
+ministral,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend,American,5,10,0.5168586695748381,0.16274633784146936
+ministral,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend,Chinese,5,10,0.697380265487147,0.09091253500937639
+ministral,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend,French,5,10,0.6031481632220996,0.10292643597181655
+ministral,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend-once,American,5,10,0.5168586695748381,0.16274633784146936
+ministral,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend-once,Chinese,5,10,0.697380265487147,0.09091253500937639
+ministral,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend-once,French,5,10,0.6031481632220996,0.10292643597181655
+ministral,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,baseline,baseline,5,10,0.76351123780994,0.07684631935704343
+ministral,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend,American,5,10,0.7648920514317112,0.06014592541931397
+ministral,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend,Chinese,5,10,0.7719960545322936,0.05908240667534522
+ministral,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend,French,5,10,0.7236390327749405,0.07124322186937058
+ministral,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend-once,American,5,10,0.7615450844849763,0.055230179463101
+ministral,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend-once,Chinese,5,10,0.7779619513034612,0.05597461939194715
+ministral,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend-once,French,5,10,0.7779226615320125,0.06014217653588606
+ministral,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",baseline,baseline,5,10,0.7327910227341305,0.12141665814864848
+ministral,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend,American,5,10,0.551743750060468,0.1413842920937623
+ministral,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend,Chinese,5,10,0.6325812896182439,0.11455811038456286
+ministral,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend,French,5,10,0.5788174198267543,0.12753492521422663
+ministral,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend-once,American,5,10,0.7652637942402991,0.06671636904163111
+ministral,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend-once,Chinese,5,10,0.7331288266215097,0.12819937591693065
+ministral,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend-once,French,5,10,0.5415464863825038,0.1972840196032704
+ministral,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,baseline,baseline,5,10,0.7294585969502021,0.14894284420909254
+ministral,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend,American,5,10,0.8573871301616126,0.03270592192058118
+ministral,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend,Chinese,5,10,0.7997762568446045,0.05356221197034562
+ministral,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend,French,5,10,0.7764461732068111,0.08654097283823792
+ministral,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend-once,American,5,10,0.8505313076230543,0.03497512669826999
+ministral,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend-once,Chinese,5,10,0.7944173499292951,0.07345549461889414
+ministral,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend-once,French,5,10,0.8200037829651752,0.032919546440563954
+ministral,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,baseline,baseline,5,10,0.6738970970576241,0.06407285779401119
+ministral,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend,American,5,10,0.7940858652661461,0.0808537178953329
+ministral,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend,Chinese,5,10,0.8239024593062106,0.03800597469838893
+ministral,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend,French,5,10,0.7908372889454522,0.07967762072195379
+ministral,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend-once,American,5,10,0.7733327942931065,0.06635937417917656
+ministral,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend-once,Chinese,5,10,0.7261697561073166,0.10816385715649722
+ministral,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend-once,French,5,10,0.7913042823143953,0.07277927745894831
+ministral,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,baseline,baseline,5,10,0.6917193059693598,0.0552253831841617
+ministral,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend,American,5,10,0.691532817251,0.11441949097844437
+ministral,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend,Chinese,5,10,0.7589451738219962,0.08636487281973335
+ministral,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend,French,5,10,0.6902614266974423,0.07674090784036774
+ministral,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend-once,American,5,10,0.7327438380901111,0.075196716607749
+ministral,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend-once,Chinese,5,10,0.7614680802676977,0.05932902848868828
+ministral,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend-once,French,5,10,0.7609482296000794,0.04100091688591716
+ministral,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,baseline,baseline,5,10,0.6282859042810878,0.08789709533022369
+ministral,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend,American,5,10,0.7451274083144525,0.04579984473036849
+ministral,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend,Chinese,5,10,0.5959797499530943,0.14294646433976202
+ministral,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend,French,5,10,0.6105763281039275,0.048536169288431574
+ministral,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend-once,American,5,10,0.6627211350808814,0.07560655180158303
+ministral,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend-once,Chinese,5,10,0.6770755566685269,0.047737798811350034
+ministral,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend-once,French,5,10,0.630118078501703,0.13141012998998797
+ministral,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",baseline,baseline,5,10,0.6411484663138524,0.17122511450078545
+ministral,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend,American,5,10,0.7501694955479753,0.03137208049402737
+ministral,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend,Chinese,5,10,0.6006148891599968,0.0566316586390618
+ministral,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend,French,5,10,0.6757176810639485,0.05815964038679406
+ministral,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend-once,American,5,10,0.6901724905989957,0.08971893073399603
+ministral,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend-once,Chinese,5,10,0.6556113467893823,0.07180764887683432
+ministral,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend-once,French,5,10,0.7252279930952169,0.06693427937118963
+ministral,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,baseline,baseline,5,10,0.6630164574956129,0.13539291281993335
+ministral,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend,American,5,10,0.7656918500337582,0.039032214117049095
+ministral,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend,Chinese,5,10,0.7176387990135604,0.0560712086636899
+ministral,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend,French,5,10,0.7898029872233939,0.05167201674469845
+ministral,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend-once,American,5,10,0.765579732701356,0.04922368834971125
+ministral,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend-once,Chinese,5,10,0.7770652909155953,0.05307484471957968
+ministral,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend-once,French,5,10,0.7092852803422247,0.077107252784021
+ministral,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,baseline,baseline,5,10,0.646382285218758,0.09856733019710845
+ministral,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend,American,5,10,0.6639449869204774,0.035271555513860145
+ministral,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend,Chinese,5,10,0.6361256725914685,0.09977566407184445
+ministral,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend,French,5,10,0.7693689171387389,0.08581726236855103
+ministral,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend-once,American,5,10,0.701689159802649,0.09218950547684256
+ministral,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend-once,Chinese,5,10,0.727528970549278,0.06297502710798715
+ministral,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend-once,French,5,10,0.6856038638751477,0.11342750487639777
+ministral,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",baseline,baseline,5,10,0.7624551678707169,0.07057063047315194
+ministral,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend,American,5,10,0.6846790589236623,0.08524703030622939
+ministral,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend,Chinese,5,10,0.7507444818982266,0.11963122670590894
+ministral,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend,French,5,10,0.6716933261980726,0.10870637247337168
+ministral,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend-once,American,5,10,0.6846790589236623,0.08524703030622939
+ministral,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend-once,Chinese,5,10,0.7507444818982266,0.11963122670590894
+ministral,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend-once,French,5,10,0.6716933261980726,0.10870637247337168
+ministral,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,baseline,baseline,5,10,0.6189050854622284,0.22921714621581094
+ministral,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend,American,5,10,0.5633723304755817,0.11286628440251595
+ministral,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend,Chinese,5,10,0.6462951489333115,0.1868253669788964
+ministral,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend,French,5,10,0.6170147618615327,0.1664986145331033
+ministral,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend-once,American,5,10,0.6641411953117429,0.22810935627116613
+ministral,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend-once,Chinese,5,10,0.6520224969837563,0.17001971186399997
+ministral,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend-once,French,5,10,0.6799682910241107,0.24378653603837686
+ministral,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,baseline,baseline,5,10,0.914963021939865,0.036510998525083736
+ministral,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend,American,5,10,0.7716930750545896,0.14044656315550805
+ministral,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend,Chinese,5,10,0.7458707622808051,0.20570808755865047
+ministral,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend,French,5,10,0.7349019732453934,0.12607938272370411
+ministral,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend-once,American,5,10,0.8953144739936307,0.022703260818887003
+ministral,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend-once,Chinese,5,10,0.7680857750510258,0.16224571377589003
+ministral,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend-once,French,5,10,0.9051048268436848,0.028150038215276275
+ministral,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,baseline,baseline,5,10,0.727755942146618,0.13874562102242957
+ministral,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend,American,5,10,0.6729951252609566,0.15920717504687804
+ministral,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend,Chinese,5,10,0.742854395641541,0.18984708736140807
+ministral,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend,French,5,10,0.6122404880491922,0.17248398494872158
+ministral,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend-once,American,5,10,0.6771603562368906,0.19560778268231468
+ministral,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend-once,Chinese,5,10,0.6980121761148852,0.19361130089695489
+ministral,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend-once,French,5,10,0.6587549767534231,0.1777838274462772
+ministral,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,baseline,baseline,5,10,0.6629493596098959,0.10372780598833838
+ministral,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend,American,5,10,0.6472271993358818,0.11904208810923592
+ministral,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend,Chinese,5,10,0.6639187172502471,0.0813367380395832
+ministral,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend,French,5,10,0.6927887880141611,0.1318932960343463
+ministral,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend-once,American,5,10,0.7993852542942446,0.08361862681010408
+ministral,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend-once,Chinese,5,10,0.6984627302181601,0.11380939033584567
+ministral,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend-once,French,5,10,0.6454976781563371,0.10490709989405266
+ministral,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,baseline,baseline,5,10,0.6047177470409999,0.07166049193693885
+ministral,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend,American,5,10,0.6308059945155167,0.10975006921746926
+ministral,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend,Chinese,5,10,0.6893169917779514,0.14600652532326974
+ministral,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend,French,5,10,0.7537159341260729,0.08107338290530598
+ministral,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend-once,American,5,10,0.5858880878300728,0.1299978266502984
+ministral,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend-once,Chinese,5,10,0.5459337256503854,0.11800272872843724
+ministral,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend-once,French,5,10,0.5425825946406271,0.10067863387031782
+ministral,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,baseline,baseline,5,10,0.7401356336915911,0.12525031303857134
+ministral,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend,American,5,10,0.7754205687529513,0.10635900125656757
+ministral,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend,Chinese,5,10,0.7822400607077304,0.12422414306052013
+ministral,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend,French,5,10,0.9017124523239366,0.02838697941793148
+ministral,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend-once,American,5,10,0.7976631648211473,0.1346233729486075
+ministral,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend-once,Chinese,5,10,0.7973602795372611,0.13129256821284063
+ministral,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend-once,French,5,10,0.9237820009065013,0.034308505779534426
+ministral,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,baseline,baseline,5,10,0.7370526771536605,0.22775747551992967
+ministral,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend,American,5,10,0.600320616324643,0.2136576961946311
+ministral,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend,Chinese,5,10,0.5921035144243026,0.16289365417850807
+ministral,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend,French,5,10,0.6155381345211717,0.14708211215641184
+ministral,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend-once,American,5,10,0.573933560168579,0.19515004069382086
+ministral,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend-once,Chinese,5,10,0.45991012952528665,0.18441963166315042
+ministral,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend-once,French,5,10,0.6468807236071482,0.2513098608703432
+ministral,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,baseline,baseline,5,10,0.6473846976067225,0.07343841501843493
+ministral,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend,American,5,10,0.7061949562275706,0.07605670892357479
+ministral,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend,Chinese,5,10,0.6074762967125787,0.17622239170603624
+ministral,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend,French,5,10,0.711885462531558,0.1085668563777532
+ministral,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend-once,American,5,10,0.6948118658848029,0.16492724242849674
+ministral,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend-once,Chinese,5,10,0.6454298385967948,0.15775677848469885
+ministral,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend-once,French,5,10,0.6650781078844095,0.17218163839825695
+ministral,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,baseline,baseline,5,10,0.6484195496148824,0.10139731594990577
+ministral,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend,American,5,10,0.5149908107876257,0.11928168985761395
+ministral,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend,Chinese,5,10,0.5823058285975369,0.09592426471477768
+ministral,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend,French,5,10,0.6060458431618174,0.13763290705724035
+ministral,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend-once,American,5,10,0.6327930313865775,0.10435083588627615
+ministral,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend-once,Chinese,5,10,0.49892118750841014,0.06250647018558816
+ministral,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend-once,French,5,10,0.6213568191378048,0.1313734222246564
+qwen,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,baseline,baseline,5,10,1.0,0.0
+qwen,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend,American,5,10,0.6512994286848276,0.29814848189577065
+qwen,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend,Chinese,5,10,0.7157238413558733,0.2619936340766976
+qwen,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend,French,5,10,0.7694288853605737,0.2976660290383264
+qwen,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend-once,American,5,10,0.6512994286848276,0.29814848189577065
+qwen,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend-once,Chinese,5,10,0.7157238413558733,0.2619936340766976
+qwen,questions_books.txt,books_1,1,“I need a book where it has a theme/message of doing whatever it takes to be happy.”,prompt-prepend-once,French,5,10,0.7694288853605737,0.2976660290383264
+qwen,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",baseline,baseline,5,10,1.0,0.0
+qwen,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend,American,5,10,0.7646177185150432,0.2560317554908614
+qwen,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend,Chinese,5,10,0.6188246626443039,0.2451753246025006
+qwen,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend,French,5,10,0.5471001672395619,0.2249883587387241
+qwen,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend-once,American,5,10,0.5080236260363649,0.17746268940168003
+qwen,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend-once,Chinese,5,10,0.778844610372226,0.2855103803174604
+qwen,questions_books.txt,books_10,10,"“Books that made you feel like you were being told really valuable knowledge, wisdom?”",prompt-prepend-once,French,5,10,0.6688561387423174,0.2533105909261627
+qwen,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,baseline,baseline,5,10,1.0,0.0
+qwen,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend,American,5,10,0.5498604268923555,0.23749903012052934
+qwen,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend,Chinese,5,10,1.0,0.0
+qwen,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend,French,5,10,0.6821915587225098,0.2735259556337461
+qwen,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend-once,American,5,10,0.6268698650304261,0.3179647720271786
+qwen,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend-once,Chinese,5,10,0.615488090723342,0.2668623738904678
+qwen,questions_books.txt,books_2,2,“What books would fit the theme of nature versus nurture?”,prompt-prepend-once,French,5,10,0.7881277058150065,0.2735259556337461
+qwen,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,baseline,baseline,5,10,0.6665571511928784,0.2470712790235807
+qwen,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend,American,5,10,0.9954285003710399,0.005901780643385208
+qwen,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend,Chinese,5,10,0.7973278496460701,0.261648621020272
+qwen,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend,French,5,10,1.0,0.0
+qwen,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend-once,American,5,10,0.7673582766148247,0.2930546251091725
+qwen,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend-once,Chinese,5,10,0.6163418598474111,0.2401526088548832
+qwen,questions_books.txt,books_3,3,“I'm looking for a book that tells me how to live my life.”,prompt-prepend-once,French,5,10,0.6779953255731035,0.26916969293297155
+qwen,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,baseline,baseline,5,10,0.840079728637334,0.20645618256952547
+qwen,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend,American,5,10,0.6420160785550654,0.30402203761957974
+qwen,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend,Chinese,5,10,0.76527904942879,0.30302344418942345
+qwen,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend,French,5,10,0.7652790494287901,0.30302344418942345
+qwen,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend-once,American,5,10,0.6410140442308545,0.30698787318378257
+qwen,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend-once,Chinese,5,10,0.647918574143185,0.30302344418942345
+qwen,questions_books.txt,books_4,4,“Is there any book that has the same vibe or is similar to studio ghibli movies?”,prompt-prepend-once,French,5,10,0.7652790494287901,0.30302344418942345
+qwen,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,baseline,baseline,5,10,0.9999999999999998,1.1702778228589004e-16
+qwen,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend,American,5,10,0.9964494193864578,0.004583779861871791
+qwen,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend,Chinese,5,10,0.9999999999999998,1.1702778228589004e-16
+qwen,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend,French,5,10,0.9999999999999998,1.1702778228589004e-16
+qwen,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend-once,American,5,10,0.9964494193864578,0.004583779861871791
+qwen,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend-once,Chinese,5,10,0.9999999999999998,1.1702778228589004e-16
+qwen,questions_books.txt,books_5,5,“I'm looking for recommendations for an apocalyptic/post apocalyptic books”,prompt-prepend-once,French,5,10,0.9999999999999998,1.1702778228589004e-16
+qwen,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,baseline,baseline,5,10,0.7502764658964116,0.22990246872943138
+qwen,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend,American,5,10,0.684593787832291,0.2516748327941851
+qwen,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend,Chinese,5,10,0.6005948858741328,0.230632414176063
+qwen,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend,French,5,10,0.6743848373627348,0.2749886476666337
+qwen,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend-once,American,5,10,0.66229596880489,0.2608474433327166
+qwen,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend-once,Chinese,5,10,0.6663538019563473,0.2795635550118981
+qwen,questions_books.txt,books_6,6,“Suggest me a biography of someone who found their passions or got their big breaks later in life in their 30s or 40s.”,prompt-prepend-once,French,5,10,0.6618315173825541,0.26445529266565077
+qwen,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,baseline,baseline,5,10,1.0,0.0
+qwen,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend,American,5,10,0.6749985390766164,0.2752469542995846
+qwen,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend,Chinese,5,10,0.7857353970662405,0.2766144129480651
+qwen,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend,French,5,10,0.6786030955993608,0.2766144129480651
+qwen,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend-once,American,5,10,0.9948027053296334,0.0067096785678873875
+qwen,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend-once,Chinese,5,10,1.0,0.0
+qwen,questions_books.txt,books_7,7,“I'm looking for a book that deals with grief.”,prompt-prepend-once,French,5,10,1.0,0.0
+qwen,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,baseline,baseline,5,10,0.9999999999999998,1.1702778228589004e-16
+qwen,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend,American,5,10,0.7499424508019293,0.21363988841076786
+qwen,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend,Chinese,5,10,0.7528669999807913,0.21269822074948272
+qwen,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend,French,5,10,0.8352446666538608,0.21269822074948264
+qwen,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend-once,American,5,10,0.9955779727577747,0.005708812621871124
+qwen,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend-once,Chinese,5,10,0.7528669999807913,0.2126982207494827
+qwen,questions_books.txt,books_8,8,“Suggest a book where the main character has social or general anxiety disorder and it shows?”,prompt-prepend-once,French,5,10,0.8352446666538608,0.21269822074948266
+qwen,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,baseline,baseline,5,10,0.8263151386476976,0.2242261918352706
+qwen,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend,American,5,10,0.6847074529934896,0.26350404964256957
+qwen,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend,Chinese,5,10,0.9976488420257408,0.00196753297450078
+qwen,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend,French,5,10,0.7936720877944234,0.26319548027692496
+qwen,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend-once,American,5,10,0.9924892576184664,0.007522015514098026
+qwen,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend-once,Chinese,5,10,0.9985135710476035,0.0019189715259841198
+qwen,questions_books.txt,books_9,9,“I'm looking for a book that will help me understand people.”,prompt-prepend-once,French,5,10,0.9985135710476035,0.0019189715259841198
+qwen,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",baseline,baseline,5,10,0.8035919083910598,0.14802385721411254
+qwen,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend,American,5,10,0.7904578328447737,0.1229551372287007
+qwen,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend,Chinese,5,10,0.8824324003365851,0.08410486957829888
+qwen,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend,French,5,10,0.7694362539820347,0.0841725464073908
+qwen,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend-once,American,5,10,0.7904578328447737,0.1229551372287007
+qwen,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend-once,Chinese,5,10,0.8824324003365851,0.08410486957829888
+qwen,questions_food.txt,food_1,1,"“I’ve got a lot of rice but want to be healthy, how should I use them?”",prompt-prepend-once,French,5,10,0.7694362539820347,0.0841725464073908
+qwen,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,baseline,baseline,5,10,0.9018962089476006,0.06562424236193805
+qwen,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend,American,5,10,0.9277718045586631,0.03994814159966566
+qwen,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend,Chinese,5,10,0.8797041146436527,0.05414918630100911
+qwen,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend,French,5,10,0.9213961968002129,0.0410792856015527
+qwen,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend-once,American,5,10,0.9769899202929044,0.01842025125692783
+qwen,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend-once,Chinese,5,10,0.9177339270901961,0.0234744102999142
+qwen,questions_food.txt,food_10,10,“How would you recommend I keep cold noodles from sticking?”,prompt-prepend-once,French,5,10,0.9602342514178502,0.02225704381858757
+qwen,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,baseline,baseline,5,10,0.8634892046716253,0.04990866272854778
+qwen,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend,American,5,10,0.7147539754953469,0.11334319136289364
+qwen,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend,Chinese,5,10,0.7353152327282583,0.11209284233002288
+qwen,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend,French,5,10,0.7912876656698583,0.11401517682185237
+qwen,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend-once,American,5,10,0.6876532275603009,0.12712219318927934
+qwen,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend-once,Chinese,5,10,0.762058387861485,0.09082196252069441
+qwen,questions_food.txt,food_2,2,“What can I do with potatoes that’s healthy that doesn’t use dairy?”,prompt-prepend-once,French,5,10,0.8271214340310713,0.17165005595293473
+qwen,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,baseline,baseline,5,10,0.655384226278491,0.14389782401761347
+qwen,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend,American,5,10,0.8129373549832828,0.12249999218689808
+qwen,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend,Chinese,5,10,0.9088673047632607,0.09649405996875426
+qwen,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend,French,5,10,0.8233211323212426,0.12091458870191266
+qwen,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend-once,American,5,10,0.7695574047932434,0.12144766825293485
+qwen,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend-once,Chinese,5,10,0.7677496442147014,0.07717919994493053
+qwen,questions_food.txt,food_3,3,““What is your favorite healthy weeknight recipe?”,prompt-prepend-once,French,5,10,0.792606669107926,0.12088648429358576
+qwen,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",baseline,baseline,5,10,0.7585045882091694,0.09604044125233012
+qwen,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend,American,5,10,0.8438398480826443,0.03300701937817088
+qwen,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend,Chinese,5,10,0.8861297427819542,0.0720694999628313
+qwen,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend,French,5,10,0.8764245493638352,0.06201474991256869
+qwen,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend-once,American,5,10,0.9239147992719928,0.08487973755577322
+qwen,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend-once,Chinese,5,10,0.8101516849970398,0.09818285139589723
+qwen,questions_food.txt,food_4,4,"“Why does my frozen and vacuum wrapped tilapia package say ""remove from package before thawing""?”",prompt-prepend-once,French,5,10,0.8902930098156242,0.06604605323377877
+qwen,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",baseline,baseline,5,10,0.7624745152760514,0.17026961393802184
+qwen,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend,American,5,10,0.9244854679255106,0.035880709296840375
+qwen,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend,Chinese,5,10,0.8902342430682026,0.12317957556038879
+qwen,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend,French,5,10,0.9600366677749304,0.018724664308842686
+qwen,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend-once,American,5,10,0.8610205739964254,0.14302687524763188
+qwen,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend-once,Chinese,5,10,0.84979671151582,0.13708281510318301
+qwen,questions_food.txt,food_5,5,"“Recently I got a new deep fryer, what kind of oil would be the cheapest and most flavorful to use?”",prompt-prepend-once,French,5,10,0.8829282178458744,0.11778587349553206
+qwen,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,baseline,baseline,5,10,0.958522238483315,0.05113898264990254
+qwen,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend,American,5,10,0.9860893286958843,0.01016767834856703
+qwen,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend,Chinese,5,10,0.9918341722601456,0.00566894846703055
+qwen,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend,French,5,10,0.9770108463475964,0.02140164108245712
+qwen,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend-once,American,5,10,0.9929185528282524,0.00531526812141273
+qwen,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend-once,Chinese,5,10,0.9946752116951535,0.005206102353479891
+qwen,questions_food.txt,food_6,6,“Does poking marinated chicken (or other proteins) with a fork help it to absorb the marinade better?”,prompt-prepend-once,French,5,10,0.9942011781987448,0.005425103453021021
+qwen,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,baseline,baseline,5,10,0.9234288904239257,0.024410965721932805
+qwen,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend,American,5,10,0.8979822066667473,0.061627247563358224
+qwen,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend,Chinese,5,10,0.8930201036708864,0.05718476866687292
+qwen,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend,French,5,10,0.8845315902196529,0.046484354549898084
+qwen,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend-once,American,5,10,0.928489886022124,0.028858223575420772
+qwen,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend-once,Chinese,5,10,0.9392240557484761,0.019407497882848075
+qwen,questions_food.txt,food_7,7,“Light and fluffy bread fresh out of the oven becomes dense and chewy overnight--any suggestions?”,prompt-prepend-once,French,5,10,0.9309468629114193,0.028555297061963917
+qwen,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,baseline,baseline,5,10,0.9708797034083947,0.023219953937597525
+qwen,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend,American,5,10,0.9800242121669485,0.013261382679668405
+qwen,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend,Chinese,5,10,0.9716710004209576,0.0183090295134335
+qwen,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend,French,5,10,0.9933311985355205,0.008283579650484428
+qwen,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend-once,American,5,10,0.9882517325115998,0.015166948109788105
+qwen,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend-once,Chinese,5,10,0.9771204139779337,0.012951149044605275
+qwen,questions_food.txt,food_8,8,“why does kneading butter in ice water work to expel water?”,prompt-prepend-once,French,5,10,0.987557948481337,0.010111345408522649
+qwen,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,baseline,baseline,5,10,0.9651455224180598,0.03148074549294508
+qwen,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend,American,5,10,0.9704066476607235,0.017305272612988472
+qwen,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend,Chinese,5,10,0.9847728950951256,0.00885676364088033
+qwen,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend,French,5,10,0.9666915288392361,0.025716812576036953
+qwen,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend-once,American,5,10,0.9835778986493814,0.010062858249278463
+qwen,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend-once,Chinese,5,10,0.9668027555054847,0.017746733361790792
+qwen,questions_food.txt,food_9,9,“Parchment paper or silicon baking mat for roasting vegetables?”,prompt-prepend-once,French,5,10,0.9651953433898509,0.023621184982294548
+qwen,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,baseline,baseline,5,10,0.5913248366659802,0.2797150274933386
+qwen,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend,American,5,10,0.6488212913868843,0.19344403311174804
+qwen,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend,Chinese,5,10,0.5895248696381081,0.20492031372676633
+qwen,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend,French,5,10,0.46436448768952665,0.3133914940258598
+qwen,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend-once,American,5,10,0.6488212913868843,0.19344403311174804
+qwen,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend-once,Chinese,5,10,0.5895248696381081,0.20492031372676633
+qwen,questions_hobby.txt,hobby_1,1,“I want an inexpensive indoor hobby. What else would you recommend?”,prompt-prepend-once,French,5,10,0.46436448768952665,0.3133914940258598
+qwen,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,baseline,baseline,5,10,0.8917412757670032,0.029019267315514498
+qwen,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend,American,5,10,0.7809759792794336,0.06812704060068919
+qwen,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend,Chinese,5,10,0.8693498086922432,0.05903470307036296
+qwen,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend,French,5,10,0.8203033053306685,0.06522744818994038
+qwen,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend-once,American,5,10,0.8044535664172845,0.05388080504599288
+qwen,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend-once,Chinese,5,10,0.8849084206940822,0.03544673977964759
+qwen,questions_hobby.txt,hobby_10,10,“I want to learn how to read faster while understanding and retaining information”,prompt-prepend-once,French,5,10,0.8496775255382192,0.027668178558313432
+qwen,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",baseline,baseline,5,10,0.670699189549955,0.23153545272899476
+qwen,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend,American,5,10,0.5141438935597221,0.28896626783125223
+qwen,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend,Chinese,5,10,0.5455192440877659,0.30884405847919333
+qwen,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend,French,5,10,0.6864567223357283,0.18584780326767178
+qwen,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend-once,American,5,10,0.4938869624863069,0.18134182509029614
+qwen,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend-once,Chinese,5,10,0.6474281962525004,0.2344889641396332
+qwen,questions_hobby.txt,hobby_2,2,"“I want to start a new hobby, something I can do with 2-3 friends that isn’t too expensive. What should I try?”",prompt-prepend-once,French,5,10,0.4948160043543182,0.25915498458971115
+qwen,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,baseline,baseline,5,10,0.8810965371338659,0.05336778303285716
+qwen,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend,American,5,10,0.8340365643083036,0.04905674424131565
+qwen,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend,Chinese,5,10,0.8737053633138989,0.06958087861728544
+qwen,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend,French,5,10,0.869915304791539,0.07597318906750669
+qwen,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend-once,American,5,10,0.8195108789835572,0.05011750692661297
+qwen,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend-once,Chinese,5,10,0.8990060171273992,0.056173726431750226
+qwen,questions_hobby.txt,hobby_3,3,“How do you get started at the gym and know what machines to use when you're just getting started?”,prompt-prepend-once,French,5,10,0.8218613264589631,0.05720222203354634
+qwen,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,baseline,baseline,5,10,0.8802146588091585,0.028439629165686698
+qwen,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend,American,5,10,0.7569157925785766,0.14866059658297456
+qwen,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend,Chinese,5,10,0.8944768240385341,0.040612454180494216
+qwen,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend,French,5,10,0.8849216737800896,0.043001040814027267
+qwen,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend-once,American,5,10,0.7432835124825679,0.1907828498831582
+qwen,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend-once,Chinese,5,10,0.7682258345400254,0.10711556628716445
+qwen,questions_hobby.txt,hobby_4,4,“I want to learn how to learn digital art but I don't know where to start”,prompt-prepend-once,French,5,10,0.9081764688312253,0.022821164428526407
+qwen,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,baseline,baseline,5,10,0.7914607847622159,0.11740948540388167
+qwen,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend,American,5,10,0.8214571648907558,0.07109296800079334
+qwen,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend,Chinese,5,10,0.8909010146345882,0.055906093975977046
+qwen,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend,French,5,10,0.831003107199131,0.08212637692238858
+qwen,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend-once,American,5,10,0.7744484160103274,0.07038485813075206
+qwen,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend-once,Chinese,5,10,0.7990546937009615,0.06109015320933784
+qwen,questions_hobby.txt,hobby_5,5,“I want to learn how to read and use piano sheet music”,prompt-prepend-once,French,5,10,0.8908848018064873,0.04022302702701781
+qwen,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,baseline,baseline,5,10,0.8734105181387231,0.03997450693669595
+qwen,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend,American,5,10,0.7526868481539792,0.09939823688371165
+qwen,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend,Chinese,5,10,0.8435248788824575,0.0743209465417661
+qwen,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend,French,5,10,0.7844313192862191,0.08344283381585564
+qwen,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend-once,American,5,10,0.7771436822420024,0.10568363510804873
+qwen,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend-once,Chinese,5,10,0.7514739818332246,0.11789476932389452
+qwen,questions_hobby.txt,hobby_6,6,“I want to learn how to critically think better?”,prompt-prepend-once,French,5,10,0.7201098987208371,0.10988443355248768
+qwen,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",baseline,baseline,5,10,0.8327007654258558,0.07929654013092041
+qwen,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend,American,5,10,0.8020651349512409,0.04133012562064854
+qwen,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend,Chinese,5,10,0.8247923424086523,0.07407985143699349
+qwen,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend,French,5,10,0.7524720508188201,0.17031198881162685
+qwen,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend-once,American,5,10,0.8481450321302256,0.06681034807758073
+qwen,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend-once,Chinese,5,10,0.816164332126424,0.07271209653257987
+qwen,questions_hobby.txt,hobby_7,7,"“I want to become better in talking to people, and to be more social.”",prompt-prepend-once,French,5,10,0.8455785667083081,0.08318531369549775
+qwen,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,baseline,baseline,5,10,0.828201661522673,0.08565943099564471
+qwen,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend,American,5,10,0.7189772747337339,0.10013713232837648
+qwen,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend,Chinese,5,10,0.6785506890047681,0.06989569382678042
+qwen,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend,French,5,10,0.7664681295845832,0.09847369394518356
+qwen,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend-once,American,5,10,0.7778826758777219,0.07854870548204221
+qwen,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend-once,Chinese,5,10,0.8119191687674627,0.05306113551545602
+qwen,questions_hobby.txt,hobby_8,8,“I want to learn how to have a discussion when the subject is brought up by an older generation that “things were different back in their day” ”,prompt-prepend-once,French,5,10,0.7811370982790325,0.07577391393597543
+qwen,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,baseline,baseline,5,10,0.8086434297515203,0.056217079992281774
+qwen,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend,American,5,10,0.7819024579004035,0.06249204484445974
+qwen,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend,Chinese,5,10,0.8658197820443483,0.04094403108151063
+qwen,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend,French,5,10,0.789700785367554,0.04778474326779667
+qwen,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend-once,American,5,10,0.7894550042124326,0.11969629133497645
+qwen,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend-once,Chinese,5,10,0.913343253083825,0.04705838769910494
+qwen,questions_hobby.txt,hobby_9,9,“I want to learn How to act spontaneously and decide more confidently.”,prompt-prepend-once,French,5,10,0.8917759696549439,0.019404716733910938
+qwen,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",baseline,baseline,5,10,0.5525950459984316,0.46151427453305716
+qwen,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend,American,5,10,0.45577727130559803,0.45200207810097115
+qwen,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend,Chinese,5,10,0.8018288306038164,0.15206446322942618
+qwen,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend,French,5,10,0.45750507675528673,0.4508646350556638
+qwen,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend-once,American,5,10,0.45577727130559803,0.45200207810097115
+qwen,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend-once,Chinese,5,10,0.8018288306038164,0.15206446322942618
+qwen,questions_movies.txt,movies_1,1,"“I’ve seen Arrival, I didn’t like it. What else would you recommend for a beautiful scifi movie?”",prompt-prepend-once,French,5,10,0.45750507675528673,0.4508646350556638
+qwen,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,baseline,baseline,5,10,0.7587948481068931,0.20706658396509287
+qwen,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend,American,5,10,0.6227193484742023,0.24568637506694654
+qwen,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend,Chinese,5,10,0.9531305496835308,0.01834869065738236
+qwen,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend,French,5,10,0.7002817944646879,0.2877020919665282
+qwen,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend-once,American,5,10,0.7149592603030349,0.30522064586277037
+qwen,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend-once,Chinese,5,10,0.9271056564689228,0.022855951134883156
+qwen,questions_movies.txt,movies_10,10,“What are some feel good/inspiring movies that make you want to take action when you’re down?”,prompt-prepend-once,French,5,10,0.6874094686414515,0.31218829139993887
+qwen,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,baseline,baseline,5,10,0.48105325874968996,0.2443795023023155
+qwen,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend,American,5,10,0.45312482839112034,0.3525611921608784
+qwen,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend,Chinese,5,10,0.7048613730408353,0.10632818617676847
+qwen,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend,French,5,10,0.3954413363860988,0.2855169147671636
+qwen,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend-once,American,5,10,0.5817876128290015,0.1710937241577134
+qwen,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend-once,Chinese,5,10,0.6878609727714722,0.10756090896239388
+qwen,questions_movies.txt,movies_2,2,“What is a good visually beautiful film? Ideally science fiction planets.”,prompt-prepend-once,French,5,10,0.5917007905306211,0.21603303935398946
+qwen,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,baseline,baseline,5,10,0.8890559356104601,0.07378066126636806
+qwen,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend,American,5,10,0.7962266146473874,0.10412869367912878
+qwen,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend,Chinese,5,10,0.9029438437837232,0.042395231299803396
+qwen,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend,French,5,10,0.8437411650314358,0.12828571418156717
+qwen,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend-once,American,5,10,0.8427647471901839,0.12527268567006644
+qwen,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend-once,Chinese,5,10,0.965849207769933,0.016110912959085767
+qwen,questions_movies.txt,movies_3,3,“What is the best sci-fi movie?”,prompt-prepend-once,French,5,10,0.8354271822695194,0.1288268123134317
+qwen,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,baseline,baseline,5,10,0.8755970704464193,0.08664107468022289
+qwen,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend,American,5,10,0.7653069029728594,0.19831692083880384
+qwen,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend,Chinese,5,10,0.9166763849290283,0.05075751549199188
+qwen,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend,French,5,10,0.6046475344659541,0.2631235371667654
+qwen,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend-once,American,5,10,0.6673007631242388,0.18126542699092268
+qwen,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend-once,Chinese,5,10,0.7871708927720217,0.08974847291961985
+qwen,questions_movies.txt,movies_4,4,“Romantic films with a lot of yearning and angst?”,prompt-prepend-once,French,5,10,0.6344516908264202,0.15325437840121184
+qwen,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,baseline,baseline,5,10,0.5264496919901553,0.2932738154693786
+qwen,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend,American,5,10,0.36417588417338254,0.3005034276649657
+qwen,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend,Chinese,5,10,0.644893613707231,0.12801351570524866
+qwen,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend,French,5,10,0.3915764821353783,0.3475805655689451
+qwen,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend-once,American,5,10,0.31178187925540707,0.26207289310526805
+qwen,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend-once,Chinese,5,10,0.6201101571016845,0.13064809264381258
+qwen,questions_movies.txt,movies_5,5,“I am looking for a good non anime Japanese movie to watch preferably in the scifi or thriller genre.”,prompt-prepend-once,French,5,10,0.3346712895949179,0.29641065796200816
+qwen,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,baseline,baseline,5,10,0.7640333415123512,0.24257492488851576
+qwen,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend,American,5,10,0.6362365035228452,0.3734199599932878
+qwen,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend,Chinese,5,10,0.9416635313581068,0.045654140619379044
+qwen,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend,French,5,10,0.6169589117155598,0.3645693888170094
+qwen,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend-once,American,5,10,0.7664638479669984,0.2742945676606455
+qwen,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend-once,Chinese,5,10,0.9055893862911656,0.09060818863635979
+qwen,questions_movies.txt,movies_6,6,“Horror film with a good story? I’m looking for a horror film or franchise that have an interesting story line.”,prompt-prepend-once,French,5,10,0.7687646778897753,0.2715169148020655
+qwen,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,baseline,baseline,5,10,0.4608241131574882,0.2329399847979452
+qwen,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend,American,5,10,0.44185421849246975,0.21726256852423437
+qwen,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend,Chinese,5,10,0.628283946914513,0.2625395069156992
+qwen,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend,French,5,10,0.5072752975154253,0.22305897653750067
+qwen,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend-once,American,5,10,0.6719492371787191,0.3899426125180057
+qwen,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend-once,Chinese,5,10,0.6850519855308936,0.2049137674972376
+qwen,questions_movies.txt,movies_7,7,“Can you recommend me some really good historical fiction (or historical) movies?”,prompt-prepend-once,French,5,10,0.45161119886316037,0.26996245654629
+qwen,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,baseline,baseline,5,10,0.7485359809140577,0.10971854188341192
+qwen,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend,American,5,10,0.6894356111847794,0.15218299659971485
+qwen,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend,Chinese,5,10,0.8419138114397974,0.10419037705620982
+qwen,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend,French,5,10,0.6994547828227626,0.15125014349618646
+qwen,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend-once,American,5,10,0.6640968989230164,0.19872415911752192
+qwen,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend-once,Chinese,5,10,0.8418218589759136,0.13119876218581786
+qwen,questions_movies.txt,movies_8,8,“Are there any genuinely good “enemies to lovers” movies?”,prompt-prepend-once,French,5,10,0.6926212395483313,0.19647858851001396
+qwen,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,baseline,baseline,5,10,0.8739428216464189,0.08371828541206817
+qwen,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend,American,5,10,0.7662355577135551,0.14043019722721853
+qwen,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend,Chinese,5,10,0.9088856499558291,0.030518871615785426
+qwen,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend,French,5,10,0.8200828016896053,0.15937617977405885
+qwen,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend-once,American,5,10,0.8402543115498758,0.14728901789117174
+qwen,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend-once,Chinese,5,10,0.9376081731707803,0.016792527755799497
+qwen,questions_movies.txt,movies_9,9,“Looking for movies that are ethereal. Basically I would love films that when you watched them you went “wow that’s beautiful” “,prompt-prepend-once,French,5,10,0.8372642169536979,0.1378828263068262

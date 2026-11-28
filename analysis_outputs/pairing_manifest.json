@@ -1,0 +1,154 @@
+{
+  "status": "complete",
+  "method": "pairing",
+  "created_utc": "2026-11-28T12:15:13.249592+00:00",
+  "inputs": [
+    {
+      "path": "/Users/kshitijdani/Documents/ChatGPT/AI Ethics Project/results/Prompt-Prepend-Once gemma.csv",
+      "sha256": "f9a2f2923a0b0f9313f262bf014b94a8f2b9cb44413fe48ec481e66815de73e4",
+      "sha256_before_enrichment": "f9a2f2923a0b0f9313f262bf014b94a8f2b9cb44413fe48ec481e66815de73e4",
+      "enriched": false
+    },
+    {
+      "path": "/Users/kshitijdani/Documents/ChatGPT/AI Ethics Project/results/Prompt-Prepend-Once ministral.csv",
+      "sha256": "1b3fbe9cf017f9c252fa8fcad54704cf79a5beae5a3a0367288bb1313342b7e9",
+      "sha256_before_enrichment": "1b3fbe9cf017f9c252fa8fcad54704cf79a5beae5a3a0367288bb1313342b7e9",
+      "enriched": false
+    },
+    {
+      "path": "/Users/kshitijdani/Documents/ChatGPT/AI Ethics Project/results/Prompt-Prepend-Once qwen.csv",
+      "sha256": "48110a2c4af420c147672d1e970c79aecd4a4bd3906bf2c74df4ad98789d206c",
+      "sha256_before_enrichment": "48110a2c4af420c147672d1e970c79aecd4a4bd3906bf2c74df4ad98789d206c",
+      "enriched": false
+    },
+    {
+      "path": "/Users/kshitijdani/Documents/ChatGPT/AI Ethics Project/results/full-baseline/multi-turn/baseline/gemma.csv",
+      "sha256": "d9f6f4f811f0bc86396cd55681580a02851c610abd7c7860562d14c08a5acf6d",
+      "sha256_before_enrichment": "d9f6f4f811f0bc86396cd55681580a02851c610abd7c7860562d14c08a5acf6d",
+      "enriched": false
+    },
+    {
+      "path": "/Users/kshitijdani/Documents/ChatGPT/AI Ethics Project/results/full-baseline/multi-turn/baseline/ministral.csv",
+      "sha256": "d936ea41ed611063d37f5654577fb92c8019b5c8746520588ec842824f09a071",
+      "sha256_before_enrichment": "d936ea41ed611063d37f5654577fb92c8019b5c8746520588ec842824f09a071",
+      "enriched": false
+    },
+    {
+      "path": "/Users/kshitijdani/Documents/ChatGPT/AI Ethics Project/results/full-baseline/multi-turn/baseline/qwen.csv",
+      "sha256": "2fe82f52bf432571baf2073d0993785c4818c625fa3a2e8670057b2e538f2a99",
+      "sha256_before_enrichment": "2fe82f52bf432571baf2073d0993785c4818c625fa3a2e8670057b2e538f2a99",
+      "enriched": false
+    },
+    {
+      "path": "/Users/kshitijdani/Documents/ChatGPT/AI Ethics Project/results/full-prompt-prepend/multi-turn/prompt-prepend/prompt-prepend gemma.csv",
+      "sha256": "4856f8a0ad1c8000a747ca44c13dc9633c3e8303ac62b15c0308ef8be28d4ac1",
+      "sha256_before_enrichment": "4856f8a0ad1c8000a747ca44c13dc9633c3e8303ac62b15c0308ef8be28d4ac1",
+      "enriched": false
+    },
+    {
+      "path": "/Users/kshitijdani/Documents/ChatGPT/AI Ethics Project/results/full-prompt-prepend/multi-turn/prompt-prepend/prompt-prepend ministral.csv",
+      "sha256": "136b13390f6e1bb1cbfaf155f7c888cbd9133146cea4284ba744a17e2b493900",
+      "sha256_before_enrichment": "136b13390f6e1bb1cbfaf155f7c888cbd9133146cea4284ba744a17e2b493900",
+      "enriched": false
+    },
+    {
+      "path": "/Users/kshitijdani/Documents/ChatGPT/AI Ethics Project/results/full-prompt-prepend/multi-turn/prompt-prepend/prompt-prepend qwen.csv",
+      "sha256": "04916dc3d4ef047874fc4b366549882493fd8bc30cd075ab1f82387136be6ba3",
+      "sha256_before_enrichment": "04916dc3d4ef047874fc4b366549882493fd8bc30cd075ab1f82387136be6ba3",
+      "enriched": false
+    }
+  ],
+  "response_count": 4200,
+  "score_count": 18000,
+  "summary_count": 720,
+  "consistency_count": 840,
+  "enriched_files": [],
+  "plot_layout": "One graph per model/topic, overlaying all personas and personalized modes.",
+  "embedding": {
+    "cache_format": 1,
+    "device": "cpu",
+    "dimension": 768,
+    "max_sequence_length": 384,
+    "model": "sentence-transformers/all-mpnet-base-v2",
+    "normalization": "unit-l2-float64",
+    "prompt": "",
+    "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+    "sentence_transformers_version": "5.7.0",
+    "torch_version": "2.15.0",
+    "transformers_version": "5.24.1",
+    "truncation": "reject",
+    "configuration": {
+      "cache_format": 1,
+      "device": "cpu",
+      "dimension": 768,
+      "max_sequence_length": 384,
+      "model": "sentence-transformers/all-mpnet-base-v2",
+      "normalization": "unit-l2-float64",
+      "prompt": "",
+      "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+      "sentence_transformers_version": "5.7.0",
+      "torch_version": "2.15.0",
+      "transformers_version": "5.24.1",
+      "truncation": "reject"
+    },
+    "configuration_sha256": "58a9788b4bdfb37c0e39a4a7bf1472a873dc263438f219413946de03d16a5a5e",
+    "cache_directory": null,
+    "unique_response_count": 2595,
+    "cache_misses": 0,
+    "cache_hits": 0,
+    "stored_vector_hits": 2595,
+    "maximum_observed_tokens": 345
+  },
+  "python_version": "3.14.3",
+  "packages": {
+    "pandas": "2.3.3",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2"
+  },
+  "command": [
+    "analysis/multi_turn_response_analysis_pairing.py",
+    "--output-folder",
+    "analysis_outputs/combined"
+  ],
+  "arguments": {
+    "input_root": null,
+    "csv": null,
+    "output_folder": "analysis_outputs/combined",
+    "cache_folder": "/Users/kshitijdani/Documents/ChatGPT/AI Ethics Project/.cache/response_embeddings",
+    "embedding_model": "sentence-transformers/all-mpnet-base-v2",
+    "revision": null,
+    "batch_size": 32,
+    "device": "cpu"
+  },
+  "analysis_code_sha256": {
+    "multi_turn_response_analysis.py": "90306efc1fc4882029ecb17b8addbfe5c6fc06222bfdb6d215a57e9f113e43af",
+    "embeddings.py": "f1d8da7372d1b376937a234add42775906bcfaf7843d8291dd8fe0d1cfa94628",
+    "csv_embeddings.py": "8ce87c956a28ed4fc2a7faab99a9aa1ad421036b5afd1728d6bd6c0a14328d02"
+  },
+  "interpretation": {
+    "similarity": "Higher means closer to the matched unpersonalized baseline.",
+    "standard_deviation": "Sample SD (ddof=1) of descriptive scores; not a confidence interval.",
+    "pairing": "All cross-run pairs are dependent; score_count is not an independent sample size.",
+    "consistency": "Mean cosine over distinct run pairs; excludes self-pairs.",
+    "hypothesis": "Personalization may weaken despite retained history; baseline similarity does not establish ignored history, persona adherence, or learned social values.",
+    "confounding": "Question content and order change with turn; curves do not isolate causation.",
+    "generation_provenance": "CSV schema does not record generation settings or model versions.",
+    "method_relationship": "pairing_mean = average_mean * baseline_concentration for the same normalized response embeddings."
+  },
+  "plots": [
+    "pairing_gemma__books-c4cbf881__comparison.png",
+    "pairing_gemma__food-cf3eccb0__comparison.png",
+    "pairing_gemma__hobby-fc3c4d56__comparison.png",
+    "pairing_gemma__movies-eb05ff3c__comparison.png",
+    "pairing_ministral__books-c4cbf881__comparison.png",
+    "pairing_ministral__food-cf3eccb0__comparison.png",
+    "pairing_ministral__hobby-fc3c4d56__comparison.png",
+    "pairing_ministral__movies-eb05ff3c__comparison.png",
+    "pairing_qwen__books-c4cbf881__comparison.png",
+    "pairing_qwen__food-cf3eccb0__comparison.png",
+    "pairing_qwen__hobby-fc3c4d56__comparison.png",
+    "pairing_qwen__movies-eb05ff3c__comparison.png"
+  ],
+  "plot_count": 12,
+  "output_layout": "Flat analysis_outputs directory; filenames prefixed by analysis method."
+}

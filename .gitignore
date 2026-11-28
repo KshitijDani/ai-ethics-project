@@ -11,5 +11,9 @@ models/
 # Include experiment CSV results in Git.
 !results/**/*.csv
 .cache/
-analysis_outputs/
+# Keep the published flat analysis set; ignore nested scratch runs.
+analysis_outputs/*
+!analysis_outputs/*.png
+!analysis_outputs/*.csv
+!analysis_outputs/*_manifest.json
 *.embedding.lock
