@@ -10,8 +10,8 @@ from urllib.error import HTTPError
 
 import pandas as pd
 
-import simulate
-import simulate_single_turn
+from scripts import simulate
+from scripts import simulate_single_turn
 
 
 COLUMNS = ['model', 'mode', 'persona', 'question_file_name', 'question_number',
@@ -54,7 +54,7 @@ class TopicSimulationTests(unittest.TestCase):
 
     def invoke(self, module, *extra):
         stream = io.StringIO()
-        with patch('simulate.request_json', side_effect=self.request), contextlib.redirect_stdout(stream):
+        with patch('scripts.simulate.request_json', side_effect=self.request), contextlib.redirect_stdout(stream):
             module.run(module.arguments([
                 '--model', 'all', '--config', str(self.config),
                 '--questions-folder', str(self.data), '--personas-folder', str(self.personas),
@@ -137,7 +137,7 @@ class TopicSimulationTests(unittest.TestCase):
                 with self.subTest(module=module.__name__, filename=filename), \
                         patch('start_server.managed_server') as start, \
                         patch('start_server.server_command', return_value=['fake']), \
-                        patch('simulate.request_json') as request, contextlib.redirect_stdout(io.StringIO()):
+                        patch('scripts.simulate.request_json') as request, contextlib.redirect_stdout(io.StringIO()):
                     args = module.arguments(['--model', 'all', '--config', str(self.config),
                                              '--questions-folder', str(self.data), '--manage-servers'])
                     with self.assertRaisesRegex(ValueError, error):
@@ -167,7 +167,7 @@ class TopicSimulationTests(unittest.TestCase):
                         raise RuntimeError('injected failure')
                     return self.request(url, timeout, payload)
                 output = self.root / f'failed-{module.__name__}-{interrupt}'
-                with patch('simulate.request_json', side_effect=fail_second), \
+                with patch('scripts.simulate.request_json', side_effect=fail_second), \
                         contextlib.redirect_stdout(stream), contextlib.redirect_stderr(errors):
                     code = module.main(['--model', 'gemma', '--mode', 'baseline', '--verbose',
                                         '--config', str(self.config), '--questions-folder', str(self.data),
@@ -213,8 +213,8 @@ class TopicSimulationTests(unittest.TestCase):
                                        'error', {}, io.BytesIO(marker.encode()))
                 self.addCleanup(http_error.close)
                 with self.subTest(module=module.__name__, failure=failure), \
-                        patch('simulate.request_json', side_effect=request), \
-                        patch('simulate.urlopen', side_effect=http_error), \
+                        patch('scripts.simulate.request_json', side_effect=request), \
+                        patch('scripts.simulate.urlopen', side_effect=http_error), \
                         contextlib.redirect_stdout(stream), contextlib.redirect_stderr(errors):
                     code = module.main(['--model', 'gemma', '--mode', 'baseline', '--verbose',
                                         '--config', str(self.config), '--questions-folder', str(self.data),

@@ -10,3 +10,6 @@ outputs/
 models/
 # Include experiment CSV results in Git.
 !results/**/*.csv
+.cache/
+analysis_outputs/
+*.embedding.lock

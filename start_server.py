@@ -56,7 +56,7 @@ def server_command(config_path, model_name):
     if (url.scheme != "http" or url.hostname not in ("127.0.0.1", "localhost")
             or url.username or url.password or url.query or url.fragment
             or url.path.rstrip("/") not in ("", "/v1")):
-        raise ValueError("The launcher needs a local http://127.0.0.1:PORT/v1 or http://localhost:PORT/v1 URL. For an existing server, run simulate.py directly.")
+        raise ValueError("The launcher needs a local http://127.0.0.1:PORT/v1 or http://localhost:PORT/v1 URL. For an existing server, run scripts/simulate.py directly.")
     if url.port is None:
         raise ValueError("Include an explicit port in base_url, such as :8080.")
     context_size = settings.get("context_size", 4096)
