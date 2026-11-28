@@ -45,7 +45,7 @@ Also set the top-level `server_executable` to `llama-server` when it is on your 
 command -v llama-server
 ```
 
-`start_server.py` uses `server_executable` and `model_path` to load the model. `simulate.py` uses `base_url` and `api_model` to send requests. Both read `config.local.json` by default; use `--config PATH` to select another configuration file. No Python source edits are needed.
+`start_server.py` uses `server_executable` and `model_path` to load the model. `scripts/simulate.py` uses `base_url` and `api_model` to send requests. Both read `config.local.json` by default; use `--config PATH` to select another configuration file. No Python source edits are needed.
 
 To check the model ID advertised by a server, query its base URL followed by `/models`:
 
@@ -114,13 +114,13 @@ Each contains the complete persona prompt. Baseline does not need persona files.
 Run the entire multi-turn experiment across all configured models and all three modes with one command:
 
 ```bash
-python simulate.py --model all --manage-servers
+python scripts/simulate.py --model all --manage-servers
 ```
 
 The runner starts and stops each server automatically and saves all results in one timestamped output folder. Five runs per condition are used by default. Execution order is model → mode → topic → persona → repetition → question. For each model, baseline finishes across all topics before prompt-prepend, then prompt-prepend-once. Within a mode, all personas and repetitions for a topic finish before the next topic. Conversation history is retained within a topic/persona/repetition and reset between topics, runs, personas, modes, and models. Fill all three persona files before running all modes. For baseline only:
 
 ```bash
-python simulate.py --mode baseline --model all --manage-servers
+python scripts/simulate.py --mode baseline --model all --manage-servers
 ```
 
 Both simulators accept `--runs`, `--output-folder`, and `--startup-timeout` with managed servers. Each server gets a log under `multi-turn/server-logs/` or `single-turn/server-logs/` in the output folder. Stop any manually running servers on the configured ports before using managed startup. Errors or Ctrl+C stop the owned server and preserve completed responses.
@@ -129,48 +129,48 @@ For manually managed servers, the existing per-model commands remain available:
 
 ```bash
 # All three modes for Gemma, five runs by default:
-python simulate.py --model gemma
+python scripts/simulate.py --model gemma
 
 # Choose a parent output folder:
-python simulate.py --model gemma --output-folder "Output Test 1"
+python scripts/simulate.py --model gemma --output-folder "Output Test 1"
 
 # Run selected modes into a common experiment folder:
-python simulate.py --mode baseline --model gemma --output-folder "Output Test 2"
-python simulate.py --mode prompt-prepend --model gemma --output-folder "Output Test 2"
-python simulate.py --mode prompt-prepend-once --model gemma --output-folder "Output Test 2"
+python scripts/simulate.py --mode baseline --model gemma --output-folder "Output Test 2"
+python scripts/simulate.py --mode prompt-prepend --model gemma --output-folder "Output Test 2"
+python scripts/simulate.py --mode prompt-prepend-once --model gemma --output-folder "Output Test 2"
 
 # Override the configured server URL for this invocation:
-python simulate.py --model qwen --server-url http://127.0.0.1:8080/v1
+python scripts/simulate.py --model qwen --server-url http://127.0.0.1:8080/v1
 
 # Small trial with a directory of shorter topic files:
-python simulate.py --mode baseline --model qwen --runs 1 --questions-folder trial-data --output-folder "Output Trial"
+python scripts/simulate.py --mode baseline --model qwen --runs 1 --questions-folder trial-data --output-folder "Output Trial"
 
-python simulate.py --help
+python scripts/simulate.py --help
 ```
 
 ### Independent single-turn questions
 
-Use `simulate_single_turn.py` when each question should be independent rather than part of a conversation. Every request contains only the optional system prompt and that question; no earlier user or assistant messages are sent. It reads the same topic files and supports all three mode labels. In both personalized modes, persona text is prepended to every independent request. `prompt-prepend-once` is therefore an equivalent condition to `prompt-prepend` in the single-turn experiment; it does not personalize only the first question.
+Use `scripts/simulate_single_turn.py` when each question should be independent rather than part of a conversation. Every request contains only the optional system prompt and that question; no earlier user or assistant messages are sent. It reads the same topic files and supports all three mode labels. In both personalized modes, persona text is prepended to every independent request. `prompt-prepend-once` is therefore an equivalent condition to `prompt-prepend` in the single-turn experiment; it does not personalize only the first question.
 
 ```bash
 # All three mode labels, five runs by default:
-python simulate_single_turn.py --model gemma
+python scripts/simulate_single_turn.py --model gemma
 
 # Baseline only, one run, using a custom topic directory:
-python simulate_single_turn.py --mode baseline --model gemma --runs 1 --questions-folder trial-data
+python scripts/simulate_single_turn.py --mode baseline --model gemma --runs 1 --questions-folder trial-data
 ```
 
 To start and stop the local servers automatically and run baseline questions across all configured models with one command:
 
 ```bash
-python simulate_single_turn.py --mode baseline --model all --manage-servers
+python scripts/simulate_single_turn.py --mode baseline --model all --manage-servers
 ```
 
 This loads one model at a time in configuration order, waits for its `/health` endpoint, runs its questions, and stops its server before loading the next. It uses five runs by default and creates one shared timestamped output folder containing `single-turn/baseline/<model>.csv` and `single-turn/server-logs/<model>.log`. Add `--runs 1` for a short trial or `--output-folder "Output Baseline Single Turn"` to name the folder. Omit `--mode` to run all three single-turn mode labels, or replace `all` with one model key.
 
 Managed startup requires valid `server_executable`, GGUF paths, and local server URLs in your configuration. Stop any manually running server on the configured ports first. The runner never stops unrelated servers. Startup has a 600-second limit per model, adjustable with `--startup-timeout SECONDS`. Errors or Ctrl+C stop the owned server and preserve completed responses; rerun into a fresh output folder. `--server-url` is only supported for a single externally managed model. Without `--manage-servers`, servers must already be running.
 
-Options for configuration, question folder, server URL, persona folder, run count and output folder work the same as for `simulate.py`. Each CSV row represents one independent question request. With N questions, five runs produce 5 × N baseline rows and 15 × N rows per personalized mode (five runs for each of the three persona files), totaling 35 × N rows per model when all three modes run. The persona is prepended to every question in either personalized mode.
+Options for configuration, question folder, server URL, persona folder, run count and output folder work the same as for `scripts/simulate.py`. Each CSV row represents one independent question request. With N questions, five runs produce 5 × N baseline rows and 15 × N rows per personalized mode (five runs for each of the three persona files), totaling 35 × N rows per model when all three modes run. The persona is prepended to every question in either personalized mode.
 
 Optional arguments also include `--config PATH` and `--personas-folder PATH`. Default inputs/configuration are relative to the repository; explicitly supplied relative paths are relative to your shell's current directory. Changing URLs or model IDs requires configuration edits only, never Python edits.
 
@@ -189,9 +189,9 @@ Runs use consecutive seeds starting at the configured seed, shared across condit
 Alternatively, run these simulation commands separately with manually managed servers, after starting the corresponding server with `python start_server.py MODEL`. Stop each server before starting the next on a machine that fits one model at a time:
 
 ```bash
-python simulate.py --model gemma --output-folder "Output Experiment 1"
-python simulate.py --model qwen --output-folder "Output Experiment 1"
-python simulate.py --model ministral --output-folder "Output Experiment 1"
+python scripts/simulate.py --model gemma --output-folder "Output Experiment 1"
+python scripts/simulate.py --model qwen --output-folder "Output Experiment 1"
+python scripts/simulate.py --model ministral --output-folder "Output Experiment 1"
 ```
 
 Omitting `--mode` means all three modes for that model. Adding `--mode baseline` runs baseline only. Repeating a model/mode whose CSV already exists is rejected before inference; adding a different model is allowed.
@@ -226,7 +226,7 @@ model,mode,persona,question_file_name,question_number,run_id,run_number,turn,que
 
 The CSV omits finish reason, reasoning content, API model, server URL, persona prompt, system prompt, seed, temperature, `top_p`, and `max_tokens`. Generation settings still come from the configuration and existing CLI overrides.
 
-With four topics, ten questions each, three models, three personas, and five repetitions, each script produces nine CSVs and 4,200 response rows: 600 baseline rows plus 1,800 rows for each personalized mode. Multi-turn and single-turn results remain separate. Analysis, embedding models, baseline matching, and plots will be added later.
+With four topics, ten questions each, three models, three personas, and five repetitions, each script produces nine CSVs and 4,200 response rows: 600 baseline rows plus 1,800 rows for each personalized mode. Multi-turn and single-turn results remain separate. See the analysis commands below to compare multi-turn responses with baseline.
 
 CSV targets are checked before inference. Existing files are not overwritten or appended; different models or modes can be added to the same parent. Multi-turn responses are saved after each conversation; single-turn responses are saved after each request. Both also save completed responses on an ordinary error or keyboard interruption. Failed experiments may leave partial CSVs; rerun in a fresh folder. There are no retries or resume behavior. Forced termination or power loss can lose unsaved responses.
 
@@ -250,8 +250,8 @@ Completed run | model=gemma | mode=prompt-prepend | topic=books | persona=Americ
 Add `--verbose` to list every extracted question's filename, ID, and full text once during loading, plus each request's start and completion with its condition, repetition, and question ID:
 
 ```bash
-python simulate.py --mode prompt-prepend --model all --manage-servers --verbose
-python simulate_single_turn.py --mode prompt-prepend --model all --manage-servers --verbose
+python scripts/simulate.py --mode prompt-prepend --model all --manage-servers --verbose
+python scripts/simulate_single_turn.py --mode prompt-prepend --model all --manage-servers --verbose
 ```
 
 Verbose console logs do not include assistant answers or persona prompt text. Server diagnostics stay in the server log files. Failed or interrupted runs report the error without a successful run or experiment completion message.
@@ -263,3 +263,135 @@ python -m unittest discover -s tests -v
 ```
 
 Tests use a fake local HTTP server to verify conversation experiment behavior; they do not validate real model inference or chat templates. See the [conversation design](docs/superpowers/specs/2026-11-13-local-multimodel-simulation-design.md), [single-turn design](docs/superpowers/specs/2026-11-14-single-turn-simulation-design.md), and [conversation implementation plan](docs/superpowers/plans/2026-11-13-local-multimodel-simulation.md).
+
+## Analysis
+
+Install the additional analysis dependencies into your virtual environment:
+
+```bash
+python -m pip install -r requirements-analysis.txt
+```
+
+Run both methods from the repository root:
+
+```bash
+python analysis/multi_turn_response_analysis_average.py
+python analysis/multi_turn_response_analysis_pairing.py
+```
+
+Both commands discover response CSVs recursively beneath `results/`, including
+the uploaded once-only files at the top level. Conditions and model names come
+from the CSV columns, so the different upload layouts are supported. Only
+multi-turn results are accepted. By default, results go to
+`analysis_outputs/average/` and `analysis_outputs/pairing/` respectively.
+
+The default encoder is `sentence-transformers/all-mpnet-base-v2`, running locally
+on CPU. Its weights download on the first run; response text is embedded on your
+machine. Both commands use the same cache under `.cache/response_embeddings/`.
+They also enrich each input CSV with two columns:
+
+- `embedding_vector`: a JSON array containing the normalized response embedding.
+- `embedding_metadata`: JSON recording encoder/configuration, token count, and
+  checksums binding the vector to its response text.
+
+Valid CSV embeddings are reused without loading the encoder or recomputing
+vectors. Repeated response text can share its stored vector. Changed responses,
+changed encoder configurations, or damaged vector cells are recovered from the
+matching cache or encoded again as needed. Original CSV fields, extra columns,
+and row order are preserved. CSV updates use per-file locks, checked source
+hashes, and atomic replacement. Analysis manifests record hashes before and after
+enrichment. The `.embedding.lock` files are ignored by Git.
+
+When no `--revision` is supplied, compatible stored vectors retain their recorded
+revision. To intentionally switch versions, supply the desired revision; the CSV
+embedding columns are then replaced for that encoder while the separate cache
+can retain previous versions. Fully stored vectors are usable offline; local
+model directories are fingerprinted to detect changed files even on reuse.
+
+The resolved encoder revision and package versions are recorded. To repeat a
+previous analysis with the same model weights, supply its manifest's
+`embedding.revision` using `--revision COMMIT_SHA`.
+
+For another experiment, an output location, or an explicit CSV selection:
+
+```bash
+python analysis/multi_turn_response_analysis_average.py --input-root results --output-folder analysis_outputs/trial
+python analysis/multi_turn_response_analysis_pairing.py --input-root results --output-folder analysis_outputs/trial
+python analysis/multi_turn_response_analysis_average.py --csv path/to/baseline.csv path/to/personalized.csv --output-folder analysis_outputs/selected
+```
+
+`--embedding-model`, `--revision`, `--cache-folder`, `--batch-size` (default 32),
+and `--device` (default `cpu`; also accepts devices such as `mps` or `cuda` when
+supported) are available on both commands. Relative overrides use your shell's
+current directory. Existing method output directories are rejected; choose a
+fresh output parent for a rerun. Keep outputs and caches outside a recursively
+discovered input root.
+
+Each method writes:
+
+| File | Contents |
+| --- | --- |
+| `scores.csv` | Individual persona-to-centroid or persona-to-baseline-pair scores, with source rows and run IDs |
+| `summary.csv` | Mean similarity, descriptive sample SD, run/score counts, baseline concentration, baseline consistency, and persona consistency for each question |
+| `consistency.csv` | Within-condition consistency over distinct run pairs, including baseline; excludes self-pairs |
+| `coverage.csv` | Responses, run counts, complete runs, and missing turns per model/topic/condition |
+| `manifest.json` | Input hashes, encoder revision/configuration, code hashes, package versions, plot list, and interpretation notes |
+| `plots/*.png` | One graph per model/topic, showing both personalized modes and all personas against baseline |
+
+For the current complete dataset, each method creates 12 graphs and 720 summary
+rows. The average method exports 3,600 individual scores; pairing exports 18,000
+scores (25 cross-run pairs per persona/question). Both export 840 within-condition
+consistency rows and 84 coverage rows. Pair counts are not independent sample
+sizes. Missing data are not imputed; incomplete conversations are reported and
+available matched turns remain usable. Identical responses from different runs
+remain separate observations, although their embeddings are cached once.
+
+The scripts embed the complete assistant response, without the question, persona
+prefix, or accumulated conversation history. Input lengths are checked before
+encoding; responses exceeding the encoder's token limit are rejected rather
+than silently truncated. Configurable encoders must use plain text without chat
+templates so that the length check matches the encoding input. Blank responses,
+duplicate identities, mismatched
+question IDs/text, and missing baseline matches are errors. The CSVs do not
+record model file versions or generation settings; the manifest preserves input
+provenance without assuming those unrecorded settings match.
+
+The **average method** takes the mean of unit baseline embeddings for the same
+model/question, normalizes that centroid, then scores each persona response
+against it. The **pairing method** scores every persona response against every
+baseline run for the same model/question. In both cases the summary is the mean
+of those scores. Their means obey:
+
+```text
+pairing_mean = average_mean × baseline_concentration
+baseline_concentration = norm(mean(unit baseline embeddings))
+```
+
+This relationship helps explain differences between methods: the all-pairs mean
+also reflects how concentrated the baseline responses are. The two methods are
+related summaries, rather than independent confirmations.
+
+On the graphs, higher values mean closer to the unpersonalized baseline. The
+dotted baseline consistency curve with square markers shows actual baseline-to-baseline similarity;
+the line at 1 is a perfect-similarity reference. For the average method, the
+baseline consistency curve is contextual pairwise variation, not the centroid's
+self-similarity. Shading shows ±1 descriptive sample SD, clipped to [-1, 1],
+and is not a confidence interval. Average-method SD describes persona-to-centroid
+scores; pairing SD describes all cross-run scores, which are dependent. Undefined
+spread or consistency for insufficient observations is left blank.
+
+Each graph overlays six persona/mode curves. Color identifies the persona;
+solid lines with circles identify `prompt-prepend`, and dashed lines with triangles
+identify `prompt-prepend-once`. Both modes share the same axes and baseline
+references, making their baseline-relative scores directly comparable. These
+curves do not compute a separate cosine similarity between the two modes.
+
+Our hypothesis is that personalization can weaken despite retained conversation
+history, potentially appearing as increasing baseline similarity, especially
+without repeated persona reminders. Departure from baseline and consistency
+across repetitions are separate measurements. Different turns ask different
+questions; these curves alone cannot establish a causal effect of turn count,
+ignored history, persona adherence, or a return to particular social values.
+Full-response similarity also includes explanatory wording and writing style.
+
+See the [approved analysis design](docs/superpowers/specs/2026-11-28-multi-turn-response-analysis-design.md).

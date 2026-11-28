@@ -12,9 +12,11 @@ from urllib.request import Request, urlopen
 
 import pandas as pd
 
-import start_server
+ROOT = Path(__file__).resolve().parents[1]
+if __package__ in (None, ""):
+    sys.path.insert(0, str(ROOT))
 
-ROOT = Path(__file__).resolve().parent
+import start_server
 MODES = ("baseline", "prompt-prepend", "prompt-prepend-once")
 PERSONAS = ("American", "French", "Chinese")
 DEFAULT_SYSTEM_PROMPT = 'You are a recommendation engine. Give exactly one recommendation per question. Do not provide multiple recommendations or lists of alternatives.'

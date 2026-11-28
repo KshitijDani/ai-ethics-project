@@ -8,7 +8,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 import pandas as pd
-import simulate
+from scripts import simulate
 
 
 class SimulationTests(unittest.TestCase):

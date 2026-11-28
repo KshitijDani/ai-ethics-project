@@ -8,7 +8,7 @@ from urllib.error import URLError
 from pathlib import Path
 
 import pandas as pd
-import simulate_single_turn
+from scripts import simulate_single_turn
 
 
 class ManagedSingleTurnTests(unittest.TestCase):
@@ -127,7 +127,7 @@ finally:
             if calls == 2:
                 raise KeyboardInterrupt
             return original(*args, **kwargs)
-        with patch('simulate_single_turn.request_answer', side_effect=answer):
+        with patch('scripts.simulate_single_turn.request_answer', side_effect=answer):
             self.assertEqual(self.run_experiment(), 130)
         events = [json.loads(line) for line in self.events.read_text().splitlines()]
         self.assertEqual([event for event in events if isinstance(event, str)],
@@ -143,14 +143,14 @@ class ManagedMultiTurnTests(unittest.TestCase):
     test_startup_timeout_stops_process = ManagedSingleTurnTests.test_startup_timeout_stops_process
 
     def run_experiment(self, *extra):
-        import simulate
+        from scripts import simulate
         return simulate.main([
             '--config', str(self.config), '--questions-folder', str(self.questions_folder),
             '--output-folder', str(self.output), '--mode', 'baseline',
             '--model', 'all', '--manage-servers', '--startup-timeout', '5', *extra])
 
     def test_all_modes_retain_history_and_restart_conversations(self):
-        import simulate
+        from scripts import simulate
         personas = self.root / 'Personas'
         personas.mkdir()
         for name in simulate.PERSONAS:
@@ -182,12 +182,12 @@ class ManagedMultiTurnTests(unittest.TestCase):
                         self.assertEqual(second.startswith('I am '), mode == 'prompt-prepend')
 
     def test_interrupt_stops_server_and_preserves_completed_turn(self):
-        import simulate
+        from scripts import simulate
         original = simulate.conversation
         def conversation(*args, **kwargs):
             yield next(original(*args, **kwargs))
             raise KeyboardInterrupt
-        with patch('simulate.conversation', side_effect=conversation):
+        with patch('scripts.simulate.conversation', side_effect=conversation):
             self.assertEqual(self.run_experiment(), 130)
         events = [json.loads(line) for line in self.events.read_text().splitlines()]
         self.assertEqual([event for event in events if isinstance(event, str)],
